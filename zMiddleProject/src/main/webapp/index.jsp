@@ -9,7 +9,7 @@
     <meta name="keywords" content="Cake, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cake | Template</title>
+    <title>양조장</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
@@ -37,19 +37,19 @@
     </div>
 
     <!-- Offcanvas Menu Begin -->
+    <!-- 화면비율 작아졌을때 왼쪽 메뉴바 -->
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__cart">
             <div class="offcanvas__cart__links">
                 <a href="#" class="search-switch"><img src="./resources/img/icon/search.png" alt=""></a>
-                <a href="#"><img src="./resources/img/icon/heart.png" alt=""></a>
             </div>
             <div class="offcanvas__cart__item">
                 <a href="#"><img src="./resources/img/icon/cart.png" alt=""> <span>0</span></a>
                 <div class="cart__price">Cart: <span>$0.00</span></div>
             </div>
         </div>
-        <div class="offcanvas__logo">
+        <div class="offcanvas__logo">	
             <a href="./index.html"><img src="./resources/img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
@@ -74,6 +74,7 @@
     <!-- Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
+    <!-- 상단 고정부분 ( 이후 position pixed 해줘야함) -->
     <header class="header">
         <div class="header__top">
             <div class="container">
@@ -82,19 +83,14 @@
                         <div class="header__top__inner">
                             <div class="header__top__left">
                                 <ul>
-                                    <li>USD <span class="arrow_carrot-down"></span>
-                                        <ul>
-                                            <li>EUR</li>
-                                            <li>USD</li>
-                                        </ul>
-                                    </li>
-                                    <li>ENG <span class="arrow_carrot-down"></span>
-                                        <ul>
-                                            <li>Spanish</li>
-                                            <li>ENG</li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
+                                    <li>스토어</li>
+                                    <li>커뮤니티</li>
+                                    <li>	
+                                    	<div class="header__top__right__links">
+                                		<!-- 검색버튼 -->
+                                    	<a href="#" class="search-switch"><img src="./resources/img/icon/search.png" alt=""></a>
+                                		</div>
+                                	</li>
                                 </ul>
                             </div>
                             <div class="header__logo">
@@ -119,7 +115,7 @@
                 <div class="canvas__open"><i class="fa fa-bars"></i></div>
             </div>
         </div>
-        <div class="container">
+        <!-- <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="header__menu mobile-menu">
@@ -143,7 +139,7 @@
                     </nav>
                 </div>
             </div>
-        </div>
+        </div> -->
     </header>
     <!-- Header Section End -->
 
