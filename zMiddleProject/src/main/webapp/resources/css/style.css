@@ -323,23 +323,19 @@ ol {
 
 .header__top__left {
   float: left;
-  margin-top:1%;	
-  margin-left:19%;
 }
 .header__top__left ul li {
-  font-size: 16px;
-  font-weight:bold;
+  font-size: 14px;
   color: #111111;
   list-style: none;
   display: inline-block;
   margin-right: 30px;
   position: relative;
-  /* padding: 2px 0; */
+  padding: 2px 0;
   cursor: pointer;
 }
 .header__top__left ul li a {
   color: #111111;
-  max-width:80%;
 }
 .header__top__left ul li:hover ul {
   top: 24px;
@@ -389,7 +385,7 @@ ol {
 
 .header__logo {
   position: absolute;
-  left: 10%;
+  left: 50%;
   top: 25px;
   margin-left: -60px;
 }
