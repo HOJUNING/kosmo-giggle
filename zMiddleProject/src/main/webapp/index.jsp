@@ -94,9 +94,16 @@
                                 </ul>
                             </div>
                             <div class="header__logo">
-                                <a href="./index.html"><img src="./resources/img/logo.png" alt=""></a>
+                                <a href="#"><img src="./resources/img/logo.png" alt=""></a>	
                             </div>
                             <div class="header__top__right">
+                            	<!-- 로그인시 ul 내용 날리고 사용자 명 찍어줘야함 -->
+                            	<div class="header__top__right__login">
+                                	<ul>
+                                		<li><a href="#">로그인</a></li>
+                                		<li><a href="#">회원가입</a></li>
+                                	</ul>
+                                </div>
                                 <div class="header__top__right__cart">
                                     <a href="cart.do"><img src="./resources/img/icon/cart.png" alt=""> <span>0</span></a>
                                     <div class="cart__price">Cart: <span>$0.00</span></div>
