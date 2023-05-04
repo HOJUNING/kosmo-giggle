@@ -76,7 +76,7 @@
     <!-- Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
-    <!-- 상단 고정부분 ( 이후 position pixed 해줘야함) -->
+    <!-- 상단 고정부분 ( 이후 position pixed 해줘야함 ) -->
     <header class="header">
         <div class="header__top">
             <div class="container">
@@ -85,7 +85,7 @@
                         <div class="header__top__inner">
                             <div class="header__top__left">
                                 <ul>
-                                    <li>스토어</li>
+                                    <li><a href="shop.do">스토어</a></li>
                                     <li>커뮤니티</li>
                                     <li>	
                                     	<div class="header__top__right__links">
@@ -165,7 +165,7 @@
                         <div class="col-lg-8">
                             <div class="hero__text">
                                 <h2>양조장네 만의 특별한 제품들은 어떠세요?</h2>
-                                <a href="#" class="primary-btn">스토어 가기</a>
+                                <a href="shop.do" class="primary-btn">스토어 가기</a>
                             </div>
                         </div>
                     </div>

@@ -9,13 +9,15 @@
     <meta name="keywords" content="Cake, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cake | Template</title>
+    <title>양조장 스토어</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+    <!-- 빠삐콘 -->
+	<link rel="shortcut icon" href="./resources/img/favicon.png" type="image/x-icon" />
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
@@ -74,6 +76,7 @@
     <!-- Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
+    <!-- 상단 고정부분 ( 이후 position pixed 해줘야함 ) -->
     <header class="header">
         <div class="header__top">
             <div class="container">
@@ -82,31 +85,29 @@
                         <div class="header__top__inner">
                             <div class="header__top__left">
                                 <ul>
-                                    <li>USD <span class="arrow_carrot-down"></span>
-                                        <ul>
-                                            <li>EUR</li>
-                                            <li>USD</li>
-                                        </ul>
-                                    </li>
-                                    <li>ENG <span class="arrow_carrot-down"></span>
-                                        <ul>
-                                            <li>Spanish</li>
-                                            <li>ENG</li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
+                                    <li><a href="shop.do">스토어</a></li>
+                                    <li>커뮤니티</li>
+                                    <li>	
+                                    	<div class="header__top__right__links">
+                                		<!-- 검색버튼 -->
+                                    	<a href="#" class="search-switch"><img src="./resources/img/icon/search.png" alt=""></a>
+                                		</div>
+                                	</li>
                                 </ul>
                             </div>
                             <div class="header__logo">
-                                <a href="#"><img src="./resources/img/logo.png" alt=""></a>
+                                <a href="#"><img src="./resources/img/mainlogo.png" alt=""></a>	
                             </div>
                             <div class="header__top__right">
-                                <div class="header__top__right__links">
-                                    <a href="#" class="search-switch"><img src="./resources/img/icon/search.png" alt=""></a>
-                                    <a href="#"><img src="./resources/img/icon/heart.png" alt=""></a>
+                            	<!-- 로그인시 ul 내용 날리고 사용자 명 찍어줘야함 -->
+                            	<div class="header__top__right__login">
+                                	<ul>
+                                		<li><a href="#">로그인</a></li>
+                                		<li><a href="#">회원가입</a></li>
+                                	</ul>
                                 </div>
                                 <div class="header__top__right__cart">
-                                    <a href="#"><img src="./resources/img/icon/cart.png" alt=""> <span>0</span></a>
+                                    <a href="cart.do"><img src="./resources/img/icon/cart.png" alt=""> <span>0</span></a>
                                     <div class="cart__price">Cart: <span>$0.00</span></div>
                                 </div>
                             </div>
@@ -121,21 +122,21 @@
                 <div class="col-lg-12">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li class="active"><a href="#">Shop</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="dropdown">
-                                    <li><a href="#">Shop Details</a></li>
+                            <li><a href="#">홈</a></li>
+                            <li><a href="#">전체상품</a></li>
+                            <li><a href="#">베스트상품</a></li>
+                            <li><a href="#">할인상품</a>
+                                <!-- <ul class="dropdown">
+                                    <li><a href="shopDetails.do">Shop Details</a></li>
                                     <li><a href="#">Shoping Cart</a></li>
                                     <li><a href="#">Check Out</a></li>
                                     <li><a href="#">Wisslist</a></li>
                                     <li><a href="#">Class</a></li>
                                     <li><a href="#">Blog Details</a></li>
-                                </ul>
+                                </ul> -->
                             </li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">미니어쳐</a></li>
+                            <!-- <li><a href="#">Contact</a></li> -->
                         </ul>
                     </nav>
                 </div>
@@ -143,302 +144,392 @@
         </div>
     </header>
     <!-- Header Section End -->
-
-    <!-- Breadcrumb Begin -->
-    <div class="breadcrumb-option">
+    
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="hero__slider owl-carousel">
+            <div class="hero__item set-bg" data-setbg="./resources/img/main/mainback1.jpg">
+            	<!-- 중앙 텍스트 박스 & 글씨 부분 -->
+                <!-- <div class="container">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="hero__text">
+                                <h2>매일 마시는 소주/맥주가 아닌 <br/>새로운 술을 찾으신다면</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="hero__item set-bg" data-setbg="./resources/img/main/mainback2.jpg">
+            	<!-- 중앙 텍스트 박스 & 글씨 부분 -->
+                <!-- <div class="container">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="hero__text">
+                                <h2>양조장네 만의 특별한 제품들은 어떠세요?</h2>
+                                <a href="#" class="primary-btn">스토어 가기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section><br/><br/>
+    <!-- Hero Section End -->
+	
+	<!-- Categories Section Begin -->
+    <div class="categories">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="breadcrumb__text">
-                        <h2>Shop</h2>
+                <div class="categories__slider owl-carousel">
+                    <div class="categories__item">
+                        <div class="categories__item__icon">
+                            <span class="flaticon-029-cupcake-3"></span>
+                            <h5>탁주</h5>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="breadcrumb__links">
-                        <a href="#">Home</a>
-                        <span>Shop</span>
+                    <div class="categories__item">
+                        <div class="categories__item__icon">
+                            <span class="flaticon-034-chocolate-roll"></span>
+                            <h5>증류주</h5>
+                        </div>
                     </div>
+                    <div class="categories__item">
+                        <div class="categories__item__icon">
+                            <span class="flaticon-005-pancake"></span>
+                            <h5>약주/청주</h5>
+                        </div>
+                    </div>
+                    <div class="categories__item">
+                        <div class="categories__item__icon">
+                            <span class="flaticon-030-cupcake-2"></span>
+                            <h5>칵테일</h5>
+                        </div>
+                    </div>
+                    <div class="categories__item">
+                        <div class="categories__item__icon">
+                            <span class="flaticon-006-macarons"></span>
+                            <h5>선물세트</h5>
+                        </div>
+                    </div>
+                    <!-- <div class="categories__item">
+                        <div class="categories__item__icon">
+                            <span class="flaticon-006-macarons"></span>
+                            <h5>Cupcake</h5>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- Breadcrumb End -->
-
-    <!-- Shop Section Begin -->
-    <section class="shop spad">
+    <!-- Categories Section End -->
+    
+    <!-- 할인상품 slider 상품 6개 -->
+    <!-- Related Products Section Begin -->
+    <section class="related-products spad">
         <div class="container">
-            <div class="shop__option">
-                <div class="row">
-                    <div class="col-lg-7 col-md-7">
-                        <div class="shop__option__search">
-                            <form action="#">
-                                <select>
-                                    <option value="">Categories</option>
-                                    <option value="">Red Velvet</option>
-                                    <option value="">Cup Cake</option>
-                                    <option value="">Biscuit</option>
-                                </select>
-                                <input type="text" placeholder="Search">
-                                <button type="submit"><i class="fa fa-search"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-md-5">
-                        <div class="shop__option__right">
-                            <select>
-                                <option value="">Default sorting</option>
-                                <option value="">A to Z</option>
-                                <option value="">1 - 8</option>
-                                <option value="">Name</option>
-                            </select>
-                            <a href="#"><i class="fa fa-list"></i></a>
-                            <a href="#"><i class="fa fa-reorder"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-1.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Dozen Cupcakes</a></h6>
-                            <div class="product__item__price">$32.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="breadcrumb__text">
+                        <h2><img src="./resources/img/shop/shop_sale.png" width="40" height="40"/>  이번달 특가<br/>매달 1일 상품이 바뀝니다!</h2>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-2.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Cookies and Cream</a></h6>
-                            <div class="product__item__price">$30.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="breadcrumb__links">
+                        <a href="#">더보기</a>
+                        <!-- <span>Shop</span> -->
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-3.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
+            </div><br/><br/>
+            <div class="row">
+                <div class="related__products__slider owl-carousel">
+                    <div class="col-lg-3">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                                <div class="product__label">
+                                    <span>주종</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Gluten Free Mini Dozen</a></h6>
-                            <div class="product__item__price">$31.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-4.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Cookie Dough</a></h6>
-                            <div class="product__item__price">$25.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
+                            <div class="product__item__text">
+                                <h6><a href="shopDetails.do">할인상품1</a></h6>
+                                <div class="product__item__price">$32.00</div>
+                                <div class="cart_add">
+                                    <a href="shopDetails.do">상세 페이지로</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-5.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
+                    <div class="col-lg-3">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                                <div class="product__label">
+                                    <span>주종</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Vanilla Salted Caramel</a></h6>
-                            <div class="product__item__price">$05.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-6.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">German Chocolate</a></h6>
-                            <div class="product__item__price">$14.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
+                            <div class="product__item__text">
+                                <h6><a href="#">할인상품2</a></h6>
+                                <div class="product__item__price">$30.00</div>
+                                <div class="cart_add">
+                                    <a href="#">상세 페이지로</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-7.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
+                    <div class="col-lg-3">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                                <div class="product__label">
+                                    <span>주종</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Dulce De Leche</a></h6>
-                            <div class="product__item__price">$32.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-8.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Mississippi Mud</a></h6>
-                            <div class="product__item__price">$08.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
+                            <div class="product__item__text">
+                                <h6><a href="#">할인상품3</a></h6>
+                                <div class="product__item__price">$31.00</div>
+                                <div class="cart_add">
+                                    <a href="#">상세 페이지로</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-9.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
+                    <div class="col-lg-3">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                                <div class="product__label">
+                                    <span>주종</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">VEGAN/GLUTEN FREE</a></h6>
-                            <div class="product__item__price">$98.85</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-10.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">SWEET CELTICS</a></h6>
-                            <div class="product__item__price">$5.77</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
+                            <div class="product__item__text">
+                                <h6><a href="#">할인상품4</a></h6>
+                                <div class="product__item__price">$25.00</div>
+                                <div class="cart_add">
+                                    <a href="#">상세 페이지로</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-11.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
+                    <div class="col-lg-3">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                                <div class="product__label">
+                                    <span>주종</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">SWEET AUTUMN LEAVES</a></h6>
-                            <div class="product__item__price">$26.41</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-12.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">PALE YELLOW SWEET</a></h6>
-                            <div class="product__item__price">$22.47</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
+                            <div class="product__item__text">
+                                <h6><a href="#">할인상품5</a></h6>
+                                <div class="product__item__price">$05.00</div>
+                                <div class="cart_add">
+                                    <a href="#">상세 페이지로</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="shop__last__option">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="shop__pagination">
-                            <a href="#">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#"><span class="arrow_carrot-right"></span></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="shop__last__text">
-                            <p>Showing 1-9 of 10 results</p>
+                    <div class="col-lg-3">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                                <div class="product__label">
+                                    <span>주종</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">할인상품6</a></h6>
+                                <div class="product__item__price">$14.00</div>
+                                <div class="cart_add">
+                                    <a href="#">상세 페이지로</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Shop Section End -->
+    <!-- Related Products Section End -->
+    
+    <!-- 칵테일 slider 메뉴 6개 -->
+    <!-- Related Products Section Begin -->
+    <section class="related-products spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="breadcrumb__text">
+                        <h2><img src="./resources/img/shop/shop_logo1.png" width="40" height="40"/>  양조장네<br/>전통주 칵테일!</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="breadcrumb__links">
+                        <a href="#">더보기</a>
+                        <!-- <span>Shop</span> -->
+                    </div>
+                </div>
+            </div><br/><br/>
+            <div class="row">
+                <div class="related__products__slider owl-carousel">
+                    <div class="col-lg-3">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                                <div class="product__label">
+                                    <span>칵테일</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">칵테일1</a></h6>
+                                <div class="product__item__price">$32.00</div>
+                                <div class="cart_add">
+                                    <a href="#">상세 페이지로</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                                <div class="product__label">
+                                    <span>칵테일</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">칵테일2</a></h6>
+                                <div class="product__item__price">$30.00</div>
+                                <div class="cart_add">
+                                    <a href="#">상세 페이지로</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                                <div class="product__label">
+                                    <span>칵테일</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">칵테일3</a></h6>
+                                <div class="product__item__price">$31.00</div>
+                                <div class="cart_add">
+                                    <a href="#">상세 페이지로</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                                <div class="product__label">
+                                    <span>칵테일</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">칵테일4</a></h6>
+                                <div class="product__item__price">$25.00</div>
+                                <div class="cart_add">
+                                    <a href="#">상세 페이지로</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                                <div class="product__label">
+                                    <span>칵테일</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">칵테일5</a></h6>
+                                <div class="product__item__price">$05.00</div>
+                                <div class="cart_add">
+                                    <a href="#">상세 페이지로</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                                <div class="product__label">
+                                    <span>칵테일</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">칵테일6</a></h6>
+                                <div class="product__item__price">$14.00</div>
+                                <div class="cart_add">
+                                    <a href="#">상세 페이지로</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Related Products Section End -->
+    
+    <!-- 게시판 -->
+    <div class="conts">
+    	<div class="col_group">
+    		<!-- 공지 -->
+    		<div class="ps_news">
+    			<div class="head">
+    				<h3>공지사항</h3>
+    				<a href="#" class="btn_more"><span>+</span> 더보기</a>
+    			</div><br/>
+    			<ul class="list">
+    				<li>1등</li>
+    				<li>2등</li>
+    				<li>3등</li>
+    			</ul>
+    		</div>
+    		<!-- 인기글 -->
+    		<div class="popular">
+    			<div class="head">
+    				<h3>지난달 베스트 게시글</h3>
+    				<a href="#" class="btn_more"><span>+</span> 더보기</a>
+    			</div><br/>
+    			<ul class="list">
+    				<li>1등</li>
+    				<li>2등</li>
+    				<li>3등</li>
+    			</ul>
+    		</div>
+    	</div>
+    </div>
 
     <!-- Footer Section Begin -->
-    <footer class="footer set-bg" data-setbg="./resources/img/footer-bg.jpg">
+    <footer class="footer set-bg" data-setbg="./resources/img/footer-background.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__widget">
-                        <h6>WORKING HOURS</h6>
+                        <h6>양조장 주식회사</h6>
                         <ul>
-                            <li>Monday - Friday: 08:00 am – 08:30 pm</li>
-                            <li>Saturday: 10:00 am – 16:30 pm</li>
-                            <li>Sunday: 10:00 am – 16:30 pm</li>
+                        	<li></li>
+                            <li>고객센터 : 070-0000-0000</li>
+                            <li>평일 10:00 - 18:00</li>
+                         <!--    <li>Sunday: 10:00 am â 16:30 pm</li> -->
+                         	<li>주말,공휴일 휴무</li>
                         </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="footer__about">
-                        <div class="footer__logo">
-                            <a href="#"><img src="./resources/img/footer-logo.png" alt=""></a>
-                        </div>
-                        <p>Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore dolore magna aliqua.</p>
                         <div class="footer__social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
                             <a href="#"><i class="fa fa-youtube-play"></i></a>
                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="#"><img src="./resources/img/mainlogo.png" alt=""></a>
+                        </div>
+                        <p>대표:양태인  사업자등록번호:000-00-00000  <br/>통신판매  신고번호:0000-코스모-0000<br/>주소:서울 금천구 가산디지털2로 123 <br/>월드메르디앙 2차 413호  정보보호 책임자:???<br/>대표 전화:000-0000-0000  이메일:hello@world</p>
+             <!--            <div class="footer__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">

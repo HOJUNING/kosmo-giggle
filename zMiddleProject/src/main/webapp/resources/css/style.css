@@ -103,6 +103,75 @@ ol {
   margin: 0;
 }
 
+/*----------------------
+	게시판 css
+-----------------------*/
+.conts {
+    width: 1200px;
+    padding: 100px 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.col_group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular {
+    width: 500px;
+}
+
+.popular .head {
+    margin-bottom: 30px;
+}
+
+.ps_news .head {
+    margin-bottom: 30px;
+}
+
+.head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.popular .list li:first-child {
+    padding-top: 0;
+}
+
+.popular .list li {
+    padding: 11px 0;
+    border-bottom: 1px solid #e3e3e3;
+    list-style: none;
+}
+
+.ps_news .list li:first-child {
+    padding-top: 0;
+}
+
+.ps_news .list li {
+    padding: 11px 0;
+    border-bottom: 1px solid #e3e3e3;
+    list-style: none;
+}
+
+.head .btn_more {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    
+}
+
+.head .btn_more span {
+    color: #00b5a6;
+}
+
+.ps_news {
+    width: 500px;
+}
+
 /*---------------------
   Helper CSS
 -----------------------*/
@@ -309,6 +378,7 @@ ol {
 -----------------------*/
 .header {
   background: #04158f82;
+  
 }
 
 .header__top {
@@ -1337,11 +1407,12 @@ ol {
 }
 
 .breadcrumb__text h2 {
-  font-size: 50px;
+  font-size: 30px;
   color: #000000;
   font-weight: 700;
-  font-style: italic;
+  /* font-style: italic; */
   font-family: "Playfair Display", serif;
+  margin-left:20px;
 }
 
 .breadcrumb__links {
@@ -1354,12 +1425,13 @@ ol {
   margin-right: 26px;
   display: inline-block;
   position: relative;
+  margin-top:30px;
 }
 .breadcrumb__links a:after {
   position: absolute;
   right: -16px;
   top: 0;
-  content: "|";
+  content: ">";
   color: #888888;
 }
 .breadcrumb__links span {
@@ -1567,6 +1639,11 @@ ol {
   color: #888888;
 }
 
+/* --------------------------- */
+
+
+/* --------------------------- */
+
 .shop__pagination a {
   display: inline-block;
   color: #000000;
@@ -1670,13 +1747,15 @@ ol {
   color: #111111;
 }
 
+/* 수정 */
 .product__details__option {
-  overflow: hidden;
+ /*  overflow: hidden; */
 }
 .product__details__option .quantity {
   overflow: hidden;
-  float: left;
+  float: right;
   margin-right: 20px;
+  
 }
 .product__details__option .pro-qty {
   height: 50px;
@@ -1721,6 +1800,19 @@ ol {
 }
 .product__details__option .primary-btn {
   margin-right: 20px;
+  margin-top : 20px;
+  width: 140px;
+    height: 50px;
+    text-align: center;
+}
+
+.sul__price
+{
+	font-size:14px;
+  margin-top : 33px;
+    height: 40px;
+    text-align: center;
+    border:1px solid #e1e1e1
 }
 
 .product__details__tab {
@@ -2385,6 +2477,11 @@ ol {
 .class__sidebar form button {
   letter-spacing: 2px;
   width: 100%;
+}
+
+.product__details__option__full {
+    display: flex;
+    justify-content: space-between;
 }
 
 /*---------------------
