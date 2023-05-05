@@ -123,7 +123,7 @@
                     <nav class="header__menu mobile-menu">
                         <ul>
                             <li><a href="#">홈</a></li>
-                            <li><a href="#">전체상품</a></li>
+                            <li><a href="shopCate.do">전체상품</a></li>
                             <li><a href="#">베스트상품</a></li>
                             <li><a href="#">할인상품</a>
                                 <!-- <ul class="dropdown">
@@ -182,12 +182,14 @@
         <div class="container">
             <div class="row">
                 <div class="categories__slider owl-carousel">
-                    <div class="categories__item">
+                    <a href="shopSubCate.do">
+                    	<div class="categories__item">
                         <div class="categories__item__icon">
                             <span class="flaticon-029-cupcake-3"></span>
                             <h5>탁주</h5>
                         </div>
                     </div>
+                    </a>
                     <div class="categories__item">
                         <div class="categories__item__icon">
                             <span class="flaticon-034-chocolate-roll"></span>
@@ -380,7 +382,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <!-- <div class="col-lg-3">
                         <div class="product__item">
                             <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
                                 <div class="product__label">
@@ -459,7 +461,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

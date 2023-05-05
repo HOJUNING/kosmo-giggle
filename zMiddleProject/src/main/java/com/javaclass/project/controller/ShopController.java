@@ -11,4 +11,14 @@ public class ShopController {
 		System.out.println("shop.do 실행");
 	}
 	
+	@RequestMapping("/shopCate")
+	public void shopCate() {
+		System.out.println("shopCate.do 실행");
+	}
+	
+	@RequestMapping("/shopSubCate")
+	public void shopSubCate() {
+		System.out.println("shopSubCate.do 실행");
+	}
+	
 }

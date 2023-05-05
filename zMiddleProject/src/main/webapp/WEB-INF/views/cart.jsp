@@ -74,6 +74,7 @@
     <!-- Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
+    <!-- 상단 고정부분 ( 이후 position pixed 해줘야함 ) -->
     <header class="header">
         <div class="header__top">
             <div class="container">
@@ -82,31 +83,29 @@
                         <div class="header__top__inner">
                             <div class="header__top__left">
                                 <ul>
-                                    <li>USD <span class="arrow_carrot-down"></span>
-                                        <ul>
-                                            <li>EUR</li>
-                                            <li>USD</li>
-                                        </ul>
-                                    </li>
-                                    <li>ENG <span class="arrow_carrot-down"></span>
-                                        <ul>
-                                            <li>Spanish</li>
-                                            <li>ENG</li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
+                                    <li><a href="shop.do">스토어</a></li>
+                                    <li>커뮤니티</li>
+                                    <li>	
+                                    	<div class="header__top__right__links">
+                                		<!-- 검색버튼 -->
+                                    	<a href="#" class="search-switch"><img src="./resources/img/icon/search.png" alt=""></a>
+                                		</div>
+                                	</li>
                                 </ul>
                             </div>
                             <div class="header__logo">
-                                <a href="#"><img src="./resources/img/logo.png" alt=""></a>
+                                <a href="#"><img src="./resources/img/mainlogo.png" alt=""></a>	
                             </div>
                             <div class="header__top__right">
-                                <div class="header__top__right__links">
-                                    <a href="#" class="search-switch"><img src="./resources/img/icon/search.png" alt=""></a>
-                                    <a href="#"><img src="./resources/img/icon/heart.png" alt=""></a>
+                            	<!-- 로그인시 ul 내용 날리고 사용자 명 찍어줘야함 -->
+                            	<div class="header__top__right__login">
+                                	<ul>
+                                		<li><a href="#">로그인</a></li>
+                                		<li><a href="#">회원가입</a></li>
+                                	</ul>
                                 </div>
                                 <div class="header__top__right__cart">
-                                    <a href="#"><img src="./resources/img/icon/cart.png" alt=""> <span>0</span></a>
+                                    <a href="cart.do"><img src="./resources/img/icon/cart.png" alt=""> <span>0</span></a>
                                     <div class="cart__price">Cart: <span>$0.00</span></div>
                                 </div>
                             </div>
@@ -116,17 +115,17 @@
                 <div class="canvas__open"><i class="fa fa-bars"></i></div>
             </div>
         </div>
-        <div class="container">
+        <!-- <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li><a href="#">Home</a></li>
+                            <li class="active"><a href="#">Home</a></li>
                             <li><a href="#">About</a></li>
-                            <li class="active"><a href="#">Shop</a></li>
+                            <li><a href="shop.do">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="dropdown">
-                                    <li><a href="#">Shop Details</a></li>
+                                    <li><a href="shopDetails.do">Shop Details</a></li>
                                     <li><a href="#">Shoping Cart</a></li>
                                     <li><a href="#">Check Out</a></li>
                                     <li><a href="#">Wisslist</a></li>
@@ -134,13 +133,13 @@
                                     <li><a href="#">Blog Details</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Blog</a></li>
+                            <li><a href="blog.do">Blog</a></li>
                             <li><a href="#">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
-        </div>
+        </div> -->
     </header>
     <!-- Header Section End -->
 
@@ -150,13 +149,12 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__text">
-                        <h2>Shopping cart</h2>
+                        <h2>장바구니</h2>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
-                        <a href="#">Home</a>
-                        <span>Shopping cart</span>
+                        <span>장바구니</span>
                     </div>
                 </div>
             </div>
@@ -173,9 +171,9 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Product</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
+                                    <th>상품명</th>
+                                    <th>갯수</th>
+                                    <th>금액</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -186,7 +184,7 @@
                                             <img src="./resources/img/shop/cart/cart-1.jpg" alt="">
                                         </div>
                                         <div class="product__cart__item__text">
-                                            <h6>T-shirt Contrast Pocket</h6>
+                                            <h6>집에</h6>
                                             <h5>$98.49</h5>
                                         </div>
                                     </td>
@@ -206,7 +204,7 @@
                                             <img src="./resources/img/shop/cart/cart-2.jpg" alt="">
                                         </div>
                                         <div class="product__cart__item__text">
-                                            <h6>Diagonal Textured Cap</h6>
+                                            <h6>가고</h6>
                                             <h5>$98.49</h5>
                                         </div>
                                     </td>
@@ -226,7 +224,7 @@
                                             <img src="./resources/img/shop/cart/cart-3.jpg" alt="">
                                         </div>
                                         <div class="product__cart__item__text">
-                                            <h6>Basic Flowing Scarf</h6>
+                                            <h6>싶어요</h6>
                                             <h5>$98.49</h5>
                                         </div>
                                     </td>
@@ -240,57 +238,40 @@
                                     <td class="cart__price">$ 47.00</td>
                                     <td class="cart__close"><span class="icon_close"></span></td>
                                 </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="./resources/img/shop/cart/cart-4.jpg" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>Basic Flowing Scarf</h6>
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">$ 30.00</td>
-                                    <td class="cart__close"><span class="icon_close"></span></td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="continue__btn">
-                                <a href="#">Continue Shopping</a>
+                                <a href="#">쇼핑하러 가기</a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="continue__btn update__btn">
-                                <a href="#"><i class="fa fa-spinner"></i> Update cart</a>
+                                <a href="#"><i class="fa fa-spinner"></i>새로고침 하기</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="cart__discount">
-                        <h6>Discount codes</h6>
+                        <h6>할인코드</h6>
                         <form action="#">
-                            <input type="text" placeholder="Coupon code">
-                            <button type="submit">Apply</button>
+                            <input type="text" placeholder="쿠폰 번호">
+                            <button type="submit">적용</button>
                         </form>
                     </div>
                     <div class="cart__total">
-                        <h6>Cart total</h6>
+                        <h6>계산서</h6>
                         <ul>
-                            <li>Subtotal <span>$ 169.50</span></li>
-                            <li>Total <span>$ 169.50</span></li>
+                        	
+                            <li>총 상품금액 <span>양로원</span></li>
+                            <li>배송비 <span>빅원</span></li>
+                            <hr/>
+                            <li>예상 결제금액 <span>풀무원</span></li>
                         </ul>
-                        <a href="#" class="primary-btn">Proceed to checkout</a>
+                        <a href="#" class="primary-btn">결제 하기</a>
                     </div>
                 </div>
             </div>
@@ -299,32 +280,39 @@
     <!-- Shopping Cart Section End -->
 
     <!-- Footer Section Begin -->
-    <footer class="footer set-bg" data-setbg="./resources/img/footer-bg.jpg">
+    <footer class="footer set-bg" data-setbg="./resources/img/footer-background.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__widget">
-                        <h6>WORKING HOURS</h6>
+                        <h6>양조장 주식회사</h6>
                         <ul>
-                            <li>Monday - Friday: 08:00 am – 08:30 pm</li>
-                            <li>Saturday: 10:00 am – 16:30 pm</li>
-                            <li>Sunday: 10:00 am – 16:30 pm</li>
+                        	<li></li>
+                            <li>고객센터 : 070-0000-0000</li>
+                            <li>평일 10:00 - 18:00</li>
+                         <!--    <li>Sunday: 10:00 am â 16:30 pm</li> -->
+                         	<li>주말,공휴일 휴무</li>
                         </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="footer__about">
-                        <div class="footer__logo">
-                            <a href="#"><img src="./resources/img/footer-logo.png" alt=""></a>
-                        </div>
-                        <p>Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore dolore magna aliqua.</p>
                         <div class="footer__social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
                             <a href="#"><i class="fa fa-youtube-play"></i></a>
                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="#"><img src="./resources/img/mainlogo.png" alt=""></a>
+                        </div>
+                        <p>대표:양태인  사업자등록번호:000-00-00000  <br/>통신판매  신고번호:0000-코스모-0000<br/>주소:서울 금천구 가산디지털2로 123 <br/>월드메르디앙 2차 413호  정보보호 책임자:???<br/>대표 전화:000-0000-0000  이메일:hello@world</p>
+             <!--            <div class="footer__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
