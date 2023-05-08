@@ -17,8 +17,8 @@ public class ShopController {
 	}
 	
 	@RequestMapping("/shopSubCate")
-	public void shopSubCate() {
-		System.out.println("shopSubCate.do 실행");
+	public void shopSubCate(int ki_num) {
+		System.out.println("/shopSubCate 실행 : " + ki_num);
 	}
 	
 }

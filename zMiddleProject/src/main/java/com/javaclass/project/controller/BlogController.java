@@ -11,4 +11,8 @@ public class BlogController {
 		System.out.println("blog.do 실행");
 	}
 	
+	@RequestMapping("/index")
+	public void index() {
+		System.out.println("index.do 실행");
+	}
 }

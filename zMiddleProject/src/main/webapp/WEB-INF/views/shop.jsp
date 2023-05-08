@@ -96,7 +96,7 @@
                                 </ul>
                             </div>
                             <div class="header__logo">
-                                <a href="#"><img src="./resources/img/mainlogo.png" alt=""></a>	
+                                <a href="index.do"><img src="./resources/img/mainlogo.png" alt=""></a>	
                             </div>
                             <div class="header__top__right">
                             	<!-- 로그인시 ul 내용 날리고 사용자 명 찍어줘야함 -->
@@ -182,38 +182,58 @@
         <div class="container">
             <div class="row">
                 <div class="categories__slider owl-carousel">
-                    <a href="shopSubCate.do">
+                	
+                	<!-- 탁주 아이콘 -->
+                    <a href="shopSubCate.do?ki_num=301">
+                    	<!-- 카테고리 이미지부분 (추후 반복문) -->
                     	<div class="categories__item">
-                        <div class="categories__item__icon">
-                            <span class="flaticon-029-cupcake-3"></span>
-                            <h5>탁주</h5>
-                        </div>
-                    </div>
+                        	<div class="categories__item__icon">
+                            	<span class="flaticon-029-cupcake-3"></span>
+                            	<h5>탁주</h5>
+                        	</div>
+                   		</div>
                     </a>
-                    <div class="categories__item">
-                        <div class="categories__item__icon">
-                            <span class="flaticon-034-chocolate-roll"></span>
-                            <h5>증류주</h5>
-                        </div>
-                    </div>
-                    <div class="categories__item">
-                        <div class="categories__item__icon">
-                            <span class="flaticon-005-pancake"></span>
-                            <h5>약주/청주</h5>
-                        </div>
-                    </div>
-                    <div class="categories__item">
-                        <div class="categories__item__icon">
-                            <span class="flaticon-030-cupcake-2"></span>
-                            <h5>칵테일</h5>
-                        </div>
-                    </div>
-                    <div class="categories__item">
-                        <div class="categories__item__icon">
-                            <span class="flaticon-006-macarons"></span>
-                            <h5>선물세트</h5>
-                        </div>
-                    </div>
+                    
+                    <!-- 증류주 아이콘 -->
+                    <a href="shopSubCate.do?ki_num=302">
+	                    <div class="categories__item">
+	                        <div class="categories__item__icon">
+	                            <span class="flaticon-034-chocolate-roll"></span>
+	                            <h5>증류주</h5>
+	                        </div>
+	                    </div>
+	                </a>
+	                
+	                <!-- 약주/청주 아이콘 -->
+					<a href="shopSubCate.do?ki_num=303">
+	                    <div class="categories__item">
+	                        <div class="categories__item__icon">
+	                            <span class="flaticon-005-pancake"></span>
+	                            <h5>약주/청주</h5>
+	                        </div>
+	                    </div>
+	                </a>
+	                
+	                <!-- 칵테일 아이콘 -->
+					<a href="shopSubCate.do?ki_num=304">
+	                    <div class="categories__item">
+	                        <div class="categories__item__icon">
+	                            <span class="flaticon-030-cupcake-2"></span>
+	                            <h5>칵테일</h5>
+	                        </div>
+	                    </div>
+	                </a>
+	                
+	                <!-- 선물세트 아이콘 -->
+					<a href="shopSubCate.do?ki_num=305">
+	                    <div class="categories__item">
+	                        <div class="categories__item__icon">
+	                            <span class="flaticon-006-macarons"></span>
+	                            <h5>선물세트</h5>
+	                        </div>
+	                    </div>
+	                </a>
+	                
                     <!-- <div class="categories__item">
                         <div class="categories__item__icon">
                             <span class="flaticon-006-macarons"></span>

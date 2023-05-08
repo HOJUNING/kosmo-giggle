@@ -178,73 +178,40 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            	<!-- 상품 반복 시작 -->
                                 <tr>
                                     <td class="product__cart__item">
                                         <div class="product__cart__item__pic">
                                             <img src="./resources/img/shop/cart/cart-1.jpg" alt="">
                                         </div>
                                         <div class="product__cart__item__text">
+                                        	<!-- h6부분 상품명 -->
                                             <h6>집에</h6>
+                                            <!-- h5부분 해당상품 가격 -->
                                             <h5>$98.49</h5>
                                         </div>
                                     </td>
                                     <td class="quantity__item">
                                         <div class="quantity">
                                             <div class="pro-qty">
-                                                <input type="text" value="1">
+                                            	<!-- 사용자가 선택한 해당 상품 갯수 (value 자리에 들어가야함) -->
+                                                <input type="text" value="0">
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="cart__price">$ 30.00</td>
+                                    <!-- 상품가격 * 갯수 -->
+                                    <td class="cart__price">3000원</td>
                                     <td class="cart__close"><span class="icon_close"></span></td>
                                 </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="./resources/img/shop/cart/cart-2.jpg" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>가고</h6>
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">$ 32.50</td>
-                                    <td class="cart__close"><span class="icon_close"></span></td>
-                                </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="./resources/img/shop/cart/cart-3.jpg" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>싶어요</h6>
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">$ 47.00</td>
-                                    <td class="cart__close"><span class="icon_close"></span></td>
-                                </tr>
+                                <!-- 상품 반복 끝 -->
+                                
                             </tbody>
                         </table>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="continue__btn">
-                                <a href="#">쇼핑하러 가기</a>
+                                <a href="shop.do">쇼핑하러 가기</a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
@@ -258,19 +225,22 @@
                     <div class="cart__discount">
                         <h6>할인코드</h6>
                         <form action="#">
-                            <input type="text" placeholder="쿠폰 번호">
+                            <input type="text" placeholder="쿠폰 번호(미구현)">
                             <button type="submit">적용</button>
                         </form>
                     </div>
+                    <!-- eq(0) span : 장바구니 상품금액 총합 -->
+                    <!-- eq(1) span : 배송비 기본 3천원 > 상품금액 총합 5만원 넘으면 무료 -->
+                    <!-- eq(1) span : 장바구니 상품금액 총합 + 배송비 -->
                     <div class="cart__total">
                         <h6>계산서</h6>
                         <ul>
-                        	
                             <li>총 상품금액 <span>양로원</span></li>
                             <li>배송비 <span>빅원</span></li>
                             <hr/>
                             <li>예상 결제금액 <span>풀무원</span></li>
                         </ul>
+                        <!-- checkOut.do -->
                         <a href="#" class="primary-btn">결제 하기</a>
                     </div>
                 </div>
