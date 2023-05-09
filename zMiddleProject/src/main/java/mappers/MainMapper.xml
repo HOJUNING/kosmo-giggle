@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project.mainMapper">
+
+<select id="loginCheck" parameterType="com.javaclass.project.domain.UsersVO" resultType="com.javaclass.project.domain.UsersVO">
+
+SELECT * FROM USERS WHERE USER_ID=#{user_id} and USER_PASS=#{user_pass}
+
+</select>
+
+<select id="cartCheck" parameterType="com.javaclass.project.domain.CartVO" resultType="com.javaclass.project.domain.CartVO">
+
+SELECT * FROM CART WHERE USER_NUM=#{user_num}
+
+</select>
+
+<select id="selectAlcoholsByPk" parameterType="com.javaclass.project.domain.AlcoholsPriceVO" resultType="com.javaclass.project.domain.AlcoholsPriceVO">
+
+SELECT al.al_num al_num, al.al_price al_price, evt.evt_per evt_per
+FROM ALCOHOLS al inner join AL_EVENTS evt
+    on al.evt_num = evt.evt_num
+WHERE al_num=#{al_num}
+
+</select>
+
+<select id="idCheck" parameterType="com.javaclass.project.domain.UsersVO" resultType="com.javaclass.project.domain.UsersVO">
+
+SELECT * FROM USERS WHERE USER_ID=#{user_id}
+
+</select>
+	
+</mapper>
