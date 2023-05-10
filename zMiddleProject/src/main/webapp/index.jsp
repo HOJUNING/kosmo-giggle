@@ -2,5 +2,5 @@
     pageEncoding="utf-8"%>
 
 <%
-	response.sendRedirect("index.do");
+	response.sendRedirect("shop/index.do");
 %>

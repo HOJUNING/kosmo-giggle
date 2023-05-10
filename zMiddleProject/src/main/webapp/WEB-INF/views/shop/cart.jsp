@@ -19,16 +19,16 @@
     rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/barfiller.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -79,7 +79,7 @@
 	                                <tr>
 	                                    <td class="product__cart__item">
 	                                        <div class="product__cart__item__pic">
-	                                            <img src="./resources/img/shop/cart/cart-1.jpg" alt="">
+	                                            <img src=".././resources/img/shop/cart/cart-1.jpg" alt="">
 	                                        </div>
 	                                        <div class="product__cart__item__text">
 	                                        	<!-- h6부분 상품명 -->
@@ -153,7 +153,7 @@
     <!-- Shopping Cart Section End -->
 
     <!-- Footer Section Begin -->
-    <footer class="footer set-bg" data-setbg="./resources/img/footer-background.jpg">
+    <footer class="footer set-bg" data-setbg=".././resources/img/footer-background.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
@@ -177,7 +177,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="#"><img src="./resources/img/mainlogo.png" alt=""></a>
+                            <a href="#"><img src=".././resources/img/mainlogo.png" alt=""></a>
                         </div>
                         <p>대표:양태인  사업자등록번호:000-00-00000  <br/>통신판매  신고번호:0000-코스모-0000<br/>주소:서울 금천구 가산디지털2로 123 <br/>월드메르디앙 2차 413호  정보보호 책임자:???<br/>대표 전화:000-0000-0000  이메일:hello@world</p>
              <!--            <div class="footer__social">
@@ -236,15 +236,15 @@
 <!-- Search End -->
 
 <!-- Js Plugins -->
-<script src="./resources/js/jquery-3.3.1.min.js"></script>
-<script src="./resources/js/bootstrap.min.js"></script>
-<script src="./resources/js/jquery.nice-select.min.js"></script>
-<script src="./resources/js/jquery.barfiller.js"></script>
-<script src="./resources/js/jquery.magnific-popup.min.js"></script>
-<script src="./resources/js/jquery.slicknav.js"></script>
-<script src="./resources/js/owl.carousel.min.js"></script>
-<script src="./resources/js/jquery.nicescroll.min.js"></script>
-<script src="./resources/js/main.js"></script>
+<script src=".././resources/js/jquery-3.3.1.min.js"></script>
+<script src=".././resources/js/bootstrap.min.js"></script>
+<script src=".././resources/js/jquery.nice-select.min.js"></script>
+<script src=".././resources/js/jquery.barfiller.js"></script>
+<script src=".././resources/js/jquery.magnific-popup.min.js"></script>
+<script src=".././resources/js/jquery.slicknav.js"></script>
+<script src=".././resources/js/owl.carousel.min.js"></script>
+<script src=".././resources/js/jquery.nicescroll.min.js"></script>
+<script src=".././resources/js/main.js"></script>
 <script type="text/javascript">
 $(function(){
 	

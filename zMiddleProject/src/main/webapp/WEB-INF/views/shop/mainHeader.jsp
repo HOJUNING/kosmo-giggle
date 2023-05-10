@@ -30,41 +30,40 @@
                                     <li>	
                                     	<div class="header__top__right__links">
                                 		<!-- 검색버튼 -->
-                                    	<a href="#" class="search-switch"><img src="./resources/img/icon/search.png" alt=""></a>
+                                    	<a href="#" class="search-switch"><img src=".././resources/img/icon/search.png" alt=""></a>
                                 		</div>
                                 	</li>
                                 </ul>
                             </div>
                             <div class="header__logo">
-                                <a href="index.do"><img src="./resources/img/mainlogo.png" alt=""></a>	
+                                <a href="index.do"><img src=".././resources/img/mainlogo.png" alt=""></a>	
                             </div>
                             <div class="header__top__right">
-                            	<!-- 로그인시 ul 내용 날리고 사용자 명 찍어줘야함 -->
                             	<div class="header__top__right__login">
                                 	<ul>
-                                	
+                                		<!-- 로그인시 세션에 로그인 정보를 저장하는데 세션 유무로 상단 헤더부분 내용 조정 -->
                                 		<c:if test="${sessionScope.user_name eq null}">
-                                		<li><a href="login.do">로그인</a></li>
-                                		<li><a href="gaip.do">회원가입</a></li>
+	                                		<li><a href="login.do">로그인</a></li>
+	                                		<li><a href="gaip.do">회원가입</a></li>
                                 		</c:if>
                                 		
                                 		<c:if test="${sessionScope.user_name ne null}">
-                                		<li><a href="#">${sessionScope.user_name}님</a></li>
-                                		<li><a href="logout.do">로그아웃</a></li>
+	                                		<li><a href="#">${sessionScope.user_name}님</a></li>
+	                                		<li><a href="logout.do">로그아웃</a></li>
                                 		</c:if>
                                 	</ul>
                                 </div>
                                 <div class="header__top__right__cart">
                                 	<c:if test="${sessionScope.user_name eq null}">
-                                    	<a href="#"><img src="./resources/img/icon/cart.png" alt=""> <span>0</span></a>
+                                    	<a href="#"><img src=".././resources/img/icon/cart.png" alt=""> <span>0</span></a>
                                     	<div class="cart__price">장바구니: <span>$0.00</span></div>
                                     </c:if>
                                     
                                     <c:if test="${sessionScope.user_name ne null}">
-                                		<a href="cart.do?user_num=${sessionScope.user_num}"><img src="./resources/img/icon/cart.png" alt=""> <span>${sessionScope.countCA}</span></a>
+                                		<a href="cart.do?user_num=${sessionScope.user_num}"><img src=".././resources/img/icon/cart.png" alt=""> <span>${sessionScope.countCA}</span></a>
                                     	<div class="cart__price">장바구니: <span>${sessionScope.priceCA} 원</span></div>
-                                    	
                                 	</c:if>
+                                	<!-- 내용 조정 끝 -->
                                 </div>
                             </div>
                         </div>

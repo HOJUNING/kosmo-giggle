@@ -6,7 +6,7 @@
 <head>
 <!-- 폰트어썸 불러오기 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-<link rel="stylesheet" href="./resources/css/gaip.css" type="text/css">
+<link rel="stylesheet" href=".././resources/css/gaip.css" type="text/css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
@@ -15,16 +15,16 @@
 <!-- 반응형 필수 -->
 <meta name="viewport" content="width=device-width, user-scalable=no" />
 
-    <link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/barfiller.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/style.css" type="text/css">
     	
 <!-- 제이쿼리 불러오기 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -209,15 +209,15 @@ $(function(){
       <jsp:include page="./footer.jsp" />
 	
 <!-- Js Plugins -->
-<script src="./resources/js/jquery-3.3.1.min.js"></script>
-<script src="./resources/js/bootstrap.min.js"></script>
-<script src="./resources/js/jquery.nice-select.min.js"></script>
-<script src="./resources/js/jquery.barfiller.js"></script>
-<script src="./resources/js/jquery.magnific-popup.min.js"></script>
-<script src="./resources/js/jquery.slicknav.js"></script>
-<script src="./resources/js/owl.carousel.min.js"></script>
-<script src="./resources/js/jquery.nicescroll.min.js"></script>
-<script src="./resources/js/main.js"></script>
+<script src=".././resources/js/jquery-3.3.1.min.js"></script>
+<script src=".././resources/js/bootstrap.min.js"></script>
+<script src=".././resources/js/jquery.nice-select.min.js"></script>
+<script src=".././resources/js/jquery.barfiller.js"></script>
+<script src=".././resources/js/jquery.magnific-popup.min.js"></script>
+<script src=".././resources/js/jquery.slicknav.js"></script>
+<script src=".././resources/js/owl.carousel.min.js"></script>
+<script src=".././resources/js/jquery.nicescroll.min.js"></script>
+<script src=".././resources/js/main.js"></script>
   
 </section>
 <!-- 사이트 박스 끝 -->

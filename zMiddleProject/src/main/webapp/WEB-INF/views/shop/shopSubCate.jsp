@@ -19,16 +19,16 @@
     rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/barfiller.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -130,7 +130,7 @@
 	               	<c:if test="${alc.al_status == '판매중'}">
 		                <div class="col-lg-3 col-md-6 col-sm-6">
 		                    <div class="product__item">
-		                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-1.jpg">
+		                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/product-1.jpg">
 		                            <div class="product__label">
 		                                <span>${alc.ki_name}</span>
 		                            </div>
@@ -173,15 +173,15 @@
     <jsp:include page="./footer.jsp" />
 
 <!-- Js Plugins -->
-<script src="./resources/js/jquery-3.3.1.min.js"></script>
-<script src="./resources/js/bootstrap.min.js"></script>
-<script src="./resources/js/jquery.nice-select.min.js"></script>
-<script src="./resources/js/jquery.barfiller.js"></script>
-<script src="./resources/js/jquery.magnific-popup.min.js"></script>
-<script src="./resources/js/jquery.slicknav.js"></script>
-<script src="./resources/js/owl.carousel.min.js"></script>
-<script src="./resources/js/jquery.nicescroll.min.js"></script>
-<script src="./resources/js/main.js"></script>
+<script src=".././resources/js/jquery-3.3.1.min.js"></script>
+<script src=".././resources/js/bootstrap.min.js"></script>
+<script src=".././resources/js/jquery.nice-select.min.js"></script>
+<script src=".././resources/js/jquery.barfiller.js"></script>
+<script src=".././resources/js/jquery.magnific-popup.min.js"></script>
+<script src=".././resources/js/jquery.slicknav.js"></script>
+<script src=".././resources/js/owl.carousel.min.js"></script>
+<script src=".././resources/js/jquery.nicescroll.min.js"></script>
+<script src=".././resources/js/main.js"></script>
 </body>
 
 </html>

@@ -17,19 +17,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
     <!-- 빠삐콘 -->
-	<link rel="shortcut icon" href="./resources/img/favicon.png" type="image/x-icon" />
+	<link rel="shortcut icon" href=".././resources/img/favicon.png" type="image/x-icon" />
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/barfiller.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -39,6 +39,7 @@
     </div>
 
     <header class="header">
+   		<!-- 헤더부분 불러오기 -->
         <jsp:include page="./mainHeader.jsp" />
         <div class="container">
             <div class="row">
@@ -59,7 +60,6 @@
                                 </ul> -->
                             </li>
                             <li><a href="#">미니어쳐</a></li>
-                            <!-- <li><a href="#">Contact</a></li> -->
                         </ul>
                     </nav>
                 </div>
@@ -71,7 +71,7 @@
     <!-- Hero Section Begin -->
     <section class="hero">
         <div class="hero__slider owl-carousel">
-            <div class="hero__item set-bg" data-setbg="./resources/img/main/mainback1.jpg">
+            <div class="hero__item set-bg" data-setbg=".././resources/img/main/mainback1.jpg">
             	<!-- 중앙 텍스트 박스 & 글씨 부분 -->
                 <!-- <div class="container">
                     <div class="row d-flex justify-content-center">
@@ -83,7 +83,7 @@
                     </div>
                 </div> -->
             </div>
-            <div class="hero__item set-bg" data-setbg="./resources/img/main/mainback2.jpg">
+            <div class="hero__item set-bg" data-setbg=".././resources/img/main/mainback2.jpg">
             	<!-- 중앙 텍스트 박스 & 글씨 부분 -->
                 <!-- <div class="container">
                     <div class="row d-flex justify-content-center">
@@ -176,7 +176,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__text">
-                        <h2><img src="./resources/img/shop/shop_sale.png" width="40" height="40"/>  이번달 특가<br/>매달 1일 상품이 바뀝니다!</h2>
+                        <h2><img src=".././resources/img/shop/shop_sale.png" width="40" height="40"/>  이번달 특가<br/>매달 1일 상품이 바뀝니다!</h2>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -190,7 +190,7 @@
                 <div class="related__products__slider owl-carousel">
                     <div class="col-lg-3">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                            <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
                                 <div class="product__label">
                                     <span>주종</span>
                                 </div>
@@ -206,7 +206,7 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                            <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
                                 <div class="product__label">
                                     <span>주종</span>
                                 </div>
@@ -222,7 +222,7 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                            <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
                                 <div class="product__label">
                                     <span>주종</span>
                                 </div>
@@ -238,7 +238,7 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                            <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
                                 <div class="product__label">
                                     <span>주종</span>
                                 </div>
@@ -254,7 +254,7 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                            <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
                                 <div class="product__label">
                                     <span>주종</span>
                                 </div>
@@ -270,7 +270,7 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                            <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
                                 <div class="product__label">
                                     <span>주종</span>
                                 </div>
@@ -297,7 +297,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__text">
-                        <h2><img src="./resources/img/shop/shop_logo1.png" width="40" height="40"/>  양조장네<br/>전통주 칵테일!</h2>
+                        <h2><img src=".././resources/img/shop/shop_logo1.png" width="40" height="40"/>  양조장네<br/>전통주 칵테일!</h2>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -311,7 +311,7 @@
                 <div class="related__products__slider owl-carousel">
                     <div class="col-lg-3">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                            <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
                                 <div class="product__label">
                                     <span>칵테일</span>
                                 </div>
@@ -327,7 +327,7 @@
                     </div>
                     <!-- <div class="col-lg-3">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                            <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
                                 <div class="product__label">
                                     <span>칵테일</span>
                                 </div>
@@ -343,7 +343,7 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                            <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
                                 <div class="product__label">
                                     <span>칵테일</span>
                                 </div>
@@ -359,7 +359,7 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                            <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
                                 <div class="product__label">
                                     <span>칵테일</span>
                                 </div>
@@ -375,7 +375,7 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                            <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
                                 <div class="product__label">
                                     <span>칵테일</span>
                                 </div>
@@ -391,7 +391,7 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/gaonasi.jpg">
+                            <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
                                 <div class="product__label">
                                     <span>칵테일</span>
                                 </div>
@@ -444,15 +444,15 @@
     <jsp:include page="./footer.jsp" />
 
 <!-- Js Plugins -->
-<script src="./resources/js/jquery-3.3.1.min.js"></script>
-<script src="./resources/js/bootstrap.min.js"></script>
-<script src="./resources/js/jquery.nice-select.min.js"></script>
-<script src="./resources/js/jquery.barfiller.js"></script>
-<script src="./resources/js/jquery.magnific-popup.min.js"></script>
-<script src="./resources/js/jquery.slicknav.js"></script>
-<script src="./resources/js/owl.carousel.min.js"></script>
-<script src="./resources/js/jquery.nicescroll.min.js"></script>
-<script src="./resources/js/main.js"></script>
+<script src=".././resources/js/jquery-3.3.1.min.js"></script>
+<script src=".././resources/js/bootstrap.min.js"></script>
+<script src=".././resources/js/jquery.nice-select.min.js"></script>
+<script src=".././resources/js/jquery.barfiller.js"></script>
+<script src=".././resources/js/jquery.magnific-popup.min.js"></script>
+<script src=".././resources/js/jquery.slicknav.js"></script>
+<script src=".././resources/js/owl.carousel.min.js"></script>
+<script src=".././resources/js/jquery.nicescroll.min.js"></script>
+<script src=".././resources/js/main.js"></script>
 </body>
 
 </html>

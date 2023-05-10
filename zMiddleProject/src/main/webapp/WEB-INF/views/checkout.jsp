@@ -73,7 +73,7 @@
     </div>
     <!-- Offcanvas Menu End -->
 
-    <jsp:include page="./mainHeader.jsp" />
+<%--     <jsp:include page="./mainHeader.jsp" /> --%>
 
     <!-- Breadcrumb Begin -->
     <div class="breadcrumb-option">
@@ -227,7 +227,7 @@
     </section>
     <!-- Checkout Section End -->
 
-    <jsp:include page="./footer.jsp" />
+    <%-- <jsp:include page="./footer.jsp" /> --%>
 
 <!-- Js Plugins -->
 <script src="./resources/js/jquery-3.3.1.min.js"></script>

@@ -19,6 +19,7 @@ import com.javaclass.project.domain.UsersVO;
 import com.javaclass.project.service.MainService;
 
 @Controller
+@RequestMapping("/shop") 
 public class MainController {
 	
 	@Autowired
@@ -26,7 +27,7 @@ public class MainController {
 	
 	@RequestMapping("/{step}.do")
 	public String viewPage(@PathVariable String step) {
-		return step;
+		return "shop/"+step;
 	}
 	
 	@RequestMapping("/logout.do")
@@ -48,7 +49,7 @@ public class MainController {
 		
 	}
 	
-	@RequestMapping(value="idCheck.do",produces="application/text;charset=UTF-8")
+	@RequestMapping(value="/idCheck.do",produces="application/text;charset=UTF-8")
 	// ********************************
 	// 비동기통신을 하기 위해
 	@ResponseBody
@@ -164,6 +165,7 @@ public class MainController {
 		m.addAttribute("finalPrice",finalPrice);
 		
 	}
+	
 	
 	@RequestMapping("/deleteCartByPk.do")
 	public String deleteCartByPk(CartVO vo) {

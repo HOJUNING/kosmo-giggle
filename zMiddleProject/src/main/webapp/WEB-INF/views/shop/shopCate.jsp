@@ -18,16 +18,16 @@
     rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/barfiller.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -122,7 +122,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-1.jpg">
+                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/product-1.jpg">
                             <div class="product__label">
                                 <span>Cupcake</span>
                             </div>
@@ -138,7 +138,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-2.jpg">
+                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/product-2.jpg">
                             <div class="product__label">
                                 <span>Cupcake</span>
                             </div>
@@ -154,7 +154,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-3.jpg">
+                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/product-3.jpg">
                             <div class="product__label">
                                 <span>Cupcake</span>
                             </div>
@@ -170,7 +170,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-4.jpg">
+                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/product-4.jpg">
                             <div class="product__label">
                                 <span>Cupcake</span>
                             </div>
@@ -186,7 +186,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-5.jpg">
+                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/product-5.jpg">
                             <div class="product__label">
                                 <span>Cupcake</span>
                             </div>
@@ -202,7 +202,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-6.jpg">
+                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/product-6.jpg">
                             <div class="product__label">
                                 <span>Cupcake</span>
                             </div>
@@ -218,7 +218,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-7.jpg">
+                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/product-7.jpg">
                             <div class="product__label">
                                 <span>Cupcake</span>
                             </div>
@@ -234,7 +234,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-8.jpg">
+                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/product-8.jpg">
                             <div class="product__label">
                                 <span>Cupcake</span>
                             </div>
@@ -250,7 +250,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-9.jpg">
+                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/product-9.jpg">
                             <div class="product__label">
                                 <span>Cupcake</span>
                             </div>
@@ -266,7 +266,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-10.jpg">
+                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/product-10.jpg">
                             <div class="product__label">
                                 <span>Cupcake</span>
                             </div>
@@ -282,7 +282,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-11.jpg">
+                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/product-11.jpg">
                             <div class="product__label">
                                 <span>Cupcake</span>
                             </div>
@@ -298,7 +298,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-12.jpg">
+                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/product-12.jpg">
                             <div class="product__label">
                                 <span>Cupcake</span>
                             </div>
@@ -337,15 +337,15 @@
     <jsp:include page="./footer.jsp" />
 
 <!-- Js Plugins -->
-<script src="./resources/js/jquery-3.3.1.min.js"></script>
-<script src="./resources/js/bootstrap.min.js"></script>
-<script src="./resources/js/jquery.nice-select.min.js"></script>
-<script src="./resources/js/jquery.barfiller.js"></script>
-<script src="./resources/js/jquery.magnific-popup.min.js"></script>
-<script src="./resources/js/jquery.slicknav.js"></script>
-<script src="./resources/js/owl.carousel.min.js"></script>
-<script src="./resources/js/jquery.nicescroll.min.js"></script>
-<script src="./resources/js/main.js"></script>
+<script src=".././resources/js/jquery-3.3.1.min.js"></script>
+<script src=".././resources/js/bootstrap.min.js"></script>
+<script src=".././resources/js/jquery.nice-select.min.js"></script>
+<script src=".././resources/js/jquery.barfiller.js"></script>
+<script src=".././resources/js/jquery.magnific-popup.min.js"></script>
+<script src=".././resources/js/jquery.slicknav.js"></script>
+<script src=".././resources/js/owl.carousel.min.js"></script>
+<script src=".././resources/js/jquery.nicescroll.min.js"></script>
+<script src=".././resources/js/main.js"></script>
 </body>
 
 </html>

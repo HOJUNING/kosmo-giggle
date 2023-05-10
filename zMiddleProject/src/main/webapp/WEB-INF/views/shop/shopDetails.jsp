@@ -19,16 +19,16 @@
     rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/barfiller.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href=".././resources/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -53,28 +53,28 @@
                 <div class="col-lg-6">
                     <div class="product__details__img">
                         <div class="product__details__big__img">
-                            <img class="big_img" src="./resources/img/shop/details/product-big-1.jpg" alt="">
+                            <img class="big_img" src=".././resources/img/shop/details/product-big-1.jpg" alt="">
                         </div>
                         <div class="product__details__thumb">
                             <div class="pt__item active">
-                                <img data-imgbigurl="./resources/img/shop/details/product-big-2.jpg"
-                                src="./resources/img/shop/details/product-big-2.jpg" alt="">
+                                <img data-imgbigurl=".././resources/img/shop/details/product-big-2.jpg"
+                                src=".././resources/img/shop/details/product-big-2.jpg" alt="">
                             </div>
                             <div class="pt__item">
-                                <img data-imgbigurl="./resources/img/shop/details/product-big-1.jpg"
-                                src="./resources/img/shop/details/product-big-1.jpg" alt="">
+                                <img data-imgbigurl=".././resources/img/shop/details/product-big-1.jpg"
+                                src=".././resources/img/shop/details/product-big-1.jpg" alt="">
                             </div>
                             <div class="pt__item">
-                                <img data-imgbigurl="./resources/img/shop/details/product-big-4.jpg"
-                                src="./resources/img/shop/details/product-big-4.jpg" alt="">
+                                <img data-imgbigurl=".././resources/img/shop/details/product-big-4.jpg"
+                                src=".././resources/img/shop/details/product-big-4.jpg" alt="">
                             </div>
                             <div class="pt__item">
-                                <img data-imgbigurl="./resources/img/shop/details/product-big-3.jpg"
-                                src="./resources/img/shop/details/product-big-3.jpg" alt="">
+                                <img data-imgbigurl=".././resources/img/shop/details/product-big-3.jpg"
+                                src=".././resources/img/shop/details/product-big-3.jpg" alt="">
                             </div>
                             <div class="pt__item">
-                                <img data-imgbigurl="./resources/img/shop/details/product-big-5.jpg"
-                                src="./resources/img/shop/details/product-big-5.jpg" alt="">
+                                <img data-imgbigurl=".././resources/img/shop/details/product-big-5.jpg"
+                                src=".././resources/img/shop/details/product-big-5.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -171,15 +171,15 @@
     <jsp:include page="./footer.jsp" />
 
 <!-- Js Plugins -->
-<script src="./resources/js/jquery-3.3.1.min.js"></script>
-<script src="./resources/js/bootstrap.min.js"></script>
-<script src="./resources/js/jquery.nice-select.min.js"></script>
-<script src="./resources/js/jquery.barfiller.js"></script>
-<script src="./resources/js/jquery.magnific-popup.min.js"></script>	
-<script src="./resources/js/jquery.slicknav.js"></script>
-<script src="./resources/js/owl.carousel.min.js"></script>
-<script src="./resources/js/jquery.nicescroll.min.js"></script>
-<script src="./resources/js/main.js"></script>
+<script src=".././resources/js/jquery-3.3.1.min.js"></script>
+<script src=".././resources/js/bootstrap.min.js"></script>
+<script src=".././resources/js/jquery.nice-select.min.js"></script>
+<script src=".././resources/js/jquery.barfiller.js"></script>
+<script src=".././resources/js/jquery.magnific-popup.min.js"></script>	
+<script src=".././resources/js/jquery.slicknav.js"></script>
+<script src=".././resources/js/owl.carousel.min.js"></script>
+<script src=".././resources/js/jquery.nicescroll.min.js"></script>
+<script src=".././resources/js/main.js"></script>
 <script type="text/javascript">
 $(function(){
 	
