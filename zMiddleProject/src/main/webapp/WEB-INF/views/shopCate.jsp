@@ -102,8 +102,6 @@
                                     <option value="">Cup Cake</option>
                                     <option value="">Biscuit</option>
                                 </select>
-                                <input type="text" placeholder="Search">
-                                <button type="submit"><i class="fa fa-search"></i></button>
                             </form>
                         </div>
                     </div>

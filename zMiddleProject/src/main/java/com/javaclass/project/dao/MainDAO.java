@@ -2,6 +2,7 @@ package com.javaclass.project.dao;
 
 import java.util.List;
 
+import com.javaclass.project.domain.AlcoholDetailVO;
 import com.javaclass.project.domain.AlcoholsPriceVO;
 import com.javaclass.project.domain.AlcoholsVO;
 import com.javaclass.project.domain.CartVO;
@@ -16,5 +17,21 @@ public interface MainDAO {
 	public AlcoholsPriceVO selectAlcoholsByPk(AlcoholsPriceVO vo);
 	
 	public UsersVO idCheck(UsersVO vo);
+	
+	public void registUser(UsersVO vo);
+	
+	public List<AlcoholsVO> alcoholsList(AlcoholsVO vo);
+	
+	public AlcoholDetailVO alcoholDetail(AlcoholDetailVO vo);
+	
+	public void insertCart(CartVO vo);
+	
+	public void updateCart(CartVO vo);
+	
+	public CartVO howsCartItem(CartVO vo);
+	
+	public void deleteCartByPk(CartVO vo);
+	
+	
 }
  

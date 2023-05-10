@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -45,10 +46,10 @@
                 <div class="col-lg-12">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li><a href="#">탁주</a></li>
-                            <li><a href="#">증류주</a></li>
-                            <li><a href="#">약주/청주</a></li>
-                            <li><a href="#">칵테일</a>
+                            <li><a href="shopSubCate.do?ki_num=301">탁주</a></li>
+                            <li><a href="shopSubCate.do?ki_num=302">증류주</a></li>
+                            <li><a href="shopSubCate.do?ki_num=303">약주/청주</a></li>
+                            <li><a href="shopSubCate.do?ki_num=304">칵테일</a>
                                 <!-- <ul class="dropdown">
                                     <li><a href="shopDetails.do">Shop Details</a></li>
                                     <li><a href="#">Shoping Cart</a></li>
@@ -58,7 +59,7 @@
                                     <li><a href="#">Blog Details</a></li>
                                 </ul> -->
                             </li>
-                            <li><a href="#">선물세트</a></li>
+                            <li><a href="shopSubCate.do?ki_num=305">선물세트</a></li>
                             <!-- <li><a href="#">Contact</a></li> -->
                         </ul>
                     </nav>
@@ -74,13 +75,13 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__text">
-                        <h2>Shop</h2>
+                        <h2>${kiName}</h2>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
-                        <a href="./index.html">Home</a>
-                        <span>Shop</span>
+                        <a href="index.do">메인</a>
+                        <span>${kiName}</span>
                     </div>
                 </div>
             </div>
@@ -91,7 +92,7 @@
     <!-- Shop Section Begin -->
     <section class="shop spad">
         <div class="container">
-            <div class="shop__option">
+           <!--  <div class="shop__option">
                 <div class="row">
                     <div class="col-lg-7 col-md-7">
                         <div class="shop__option__search">
@@ -120,202 +121,35 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-1.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Dozen Cupcakes</a></h6>
-                            <div class="product__item__price">$32.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-2.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Cookies and Cream</a></h6>
-                            <div class="product__item__price">$30.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-3.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Gluten Free Mini Dozen</a></h6>
-                            <div class="product__item__price">$31.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-4.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Cookie Dough</a></h6>
-                            <div class="product__item__price">$25.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-5.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Vanilla Salted Caramel</a></h6>
-                            <div class="product__item__price">$05.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-6.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">German Chocolate</a></h6>
-                            <div class="product__item__price">$14.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-7.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Dulce De Leche</a></h6>
-                            <div class="product__item__price">$32.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-8.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Mississippi Mud</a></h6>
-                            <div class="product__item__price">$08.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-9.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">VEGAN/GLUTEN FREE</a></h6>
-                            <div class="product__item__price">$98.85</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-10.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">SWEET CELTICS</a></h6>
-                            <div class="product__item__price">$5.77</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-11.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">SWEET AUTUMN LEAVES</a></h6>
-                            <div class="product__item__price">$26.41</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-12.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">PALE YELLOW SWEET</a></h6>
-                            <div class="product__item__price">$22.47</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            
+            	<!-- 내용 시작 -->
+                <c:forEach items="${alSubList}" var="alc">
+                
+	               	<c:if test="${alc.al_status == '판매중'}">
+		                <div class="col-lg-3 col-md-6 col-sm-6">
+		                    <div class="product__item">
+		                        <div class="product__item__pic set-bg" data-setbg="./resources/img/shop/product-1.jpg">
+		                            <div class="product__label">
+		                                <span>${alc.ki_name}</span>
+		                            </div>
+		                        </div>
+		                        <div class="product__item__text">
+		                            <h6><a href="shopDetails.do?al_num=${alc.al_num}">${alc.al_name}</a></h6>
+		                            <div class="product__item__price">${alc.al_price}원</div>
+		                            <div class="cart_add">
+		                                <a href="shopDetails.do?al_num=${alc.al_num}">상세 페이지로</a>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+	                </c:if>
+	                
+                </c:forEach>
+                 <!-- 내용 끝 -->
             </div>
-            <div class="shop__last__option">
+            <!-- <div class="shop__last__option">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="shop__pagination">
@@ -331,7 +165,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <!-- Shop Section End -->

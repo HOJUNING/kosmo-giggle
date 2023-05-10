@@ -13,8 +13,22 @@ public class AlcoholsVO {
 	   private Integer al_stock; // 재고
 	   private String  al_status; // 재고상태
 	   private String  al_opic; // 주류사진
+	   private String ki_name;
+	   private int evt_per;
 	   
-	   public Integer getAl_num() {
+	   public int getEvt_per() {
+		return evt_per;
+	}
+	public void setEvt_per(int evt_per) {
+		this.evt_per = evt_per;
+	}
+	public String getKi_name() {
+		return ki_name;
+	}
+	public void setKi_name(String ki_name) {
+		this.ki_name = ki_name;
+	}
+	public Integer getAl_num() {
 	      return al_num;
 	   }
 	   public void setAl_num(Integer al_num) {

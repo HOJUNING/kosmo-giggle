@@ -6,7 +6,9 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.javaclass.project.domain.AlcoholDetailVO;
 import com.javaclass.project.domain.AlcoholsPriceVO;
+import com.javaclass.project.domain.AlcoholsVO;
 import com.javaclass.project.domain.CartVO;
 import com.javaclass.project.domain.UsersVO;
 
@@ -36,5 +38,44 @@ public class MainDAOImpl implements MainDAO {
 	public UsersVO idCheck(UsersVO vo) {
 		return mybatis.selectOne("project.mainMapper.idCheck",vo);
 	}
+
+	@Override
+	public void registUser(UsersVO vo) {
+		mybatis.insert("project.mainMapper.registUser",vo);
+		
+	}
+
+	@Override
+	public List<AlcoholsVO> alcoholsList(AlcoholsVO vo) {
+		return mybatis.selectList("project.mainMapper.alcoholsList",vo);
+	}
+
+	@Override
+	public AlcoholDetailVO alcoholDetail(AlcoholDetailVO vo) {
+		return mybatis.selectOne("project.mainMapper.alcoholDetail",vo);
+	}
+
+	@Override
+	public void insertCart(CartVO vo) {
+		mybatis.insert("project.mainMapper.insertCart",vo);
+	}
+
+	@Override
+	public void updateCart(CartVO vo) {
+		mybatis.update("project.mainMapper.updateCart",vo);
+	}
+
+	@Override
+	public CartVO howsCartItem(CartVO vo) {
+		return mybatis.selectOne("project.mainMapper.howsCartItem",vo);
+	}
+
+	@Override
+	public void deleteCartByPk(CartVO vo) {
+		mybatis.delete("project.mainMapper.deleteCartByPk",vo);
+		
+	}
+	
+	
  
 }

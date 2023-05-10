@@ -6,7 +6,28 @@ public class CartVO {
 	private int user_num;
 	private int al_num;
 	private int ca_count;
+	private int al_price;
+	private String al_name;
+	private int hap_price;
 	
+	public int getHap_price() {
+		return hap_price;
+	}
+	public void setHap_price(int hap_price) {
+		this.hap_price = hap_price;
+	}
+	public String getAl_name() {
+		return al_name;
+	}
+	public void setAl_name(String al_name) {
+		this.al_name = al_name;
+	}
+	public int getAl_price() {
+		return al_price;
+	}
+	public void setAl_price(int al_price) {
+		this.al_price = al_price;
+	}
 	public int getCa_num() {
 		return ca_num;
 	}

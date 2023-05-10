@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.javaclass.project.dao.MainDAO;
+import com.javaclass.project.domain.AlcoholDetailVO;
 import com.javaclass.project.domain.AlcoholsPriceVO;
 import com.javaclass.project.domain.AlcoholsVO;
 import com.javaclass.project.domain.CartVO;
@@ -39,6 +40,44 @@ public class MainServiceImpl implements MainService {
 	@Override
 	public UsersVO idCheck(UsersVO vo) {
 		return mainDAO.idCheck(vo);
+	}
+
+	@Override
+	public void registUser(UsersVO vo) {
+		mainDAO.registUser(vo);
+		
+	}
+
+	@Override
+	public List<AlcoholsVO> alcoholsList(AlcoholsVO vo) {
+		return mainDAO.alcoholsList(vo);
+	}
+
+	@Override
+	public AlcoholDetailVO alcoholDetail(AlcoholDetailVO vo) {
+		return mainDAO.alcoholDetail(vo);
+	}
+
+	@Override
+	public void insertCart(CartVO vo) {
+		mainDAO.insertCart(vo);
+		
+	}
+
+	@Override
+	public void updateCart(CartVO vo) {
+		mainDAO.updateCart(vo);
+	}
+
+	@Override
+	public CartVO howsCartItem(CartVO vo) {
+		return mainDAO.howsCartItem(vo);
+	}
+
+	@Override
+	public void deleteCartByPk(CartVO vo) {
+		mainDAO.deleteCartByPk(vo);
+		
 	}
 
 }

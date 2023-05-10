@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -74,31 +75,38 @@
                             </thead>
                             <tbody>
                             	<!-- 상품 반복 시작 -->
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="./resources/img/shop/cart/cart-1.jpg" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                        	<!-- h6부분 상품명 -->
-                                            <h6>집에</h6>
-                                            <!-- h5부분 해당상품 가격 -->
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                            	<!-- 사용자가 선택한 해당 상품 갯수 (value 자리에 들어가야함) -->
-                                                <input type="text" value="0">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <!-- 상품가격 * 갯수 -->
-                                    <td class="cart__price">3000원</td>
-                                    <td class="cart__close"><span class="icon_close"></span></td>
-                                </tr>
-                                <!-- 상품 반복 끝 -->
+                            	<c:forEach items="${cartList}" var="cart">
+	                                <tr>
+	                                    <td class="product__cart__item">
+	                                        <div class="product__cart__item__pic">
+	                                            <img src="./resources/img/shop/cart/cart-1.jpg" alt="">
+	                                        </div>
+	                                        <div class="product__cart__item__text">
+	                                        	<!-- h6부분 상품명 -->
+	                                            <h6 id="cart_alName">
+	                                            	<input type="hidden" value="${cart.al_num }">
+	                                            	${cart.al_name}
+	                                            </h6>
+	                                            <!-- h5부분 해당상품 가격 -->
+	                                            <h5>${cart.al_price}원</h5>
+	                                        </div>
+	                                    </td>
+	                                    <td class="quantity__item">
+	                                        <div class="quantity">
+	                                            <!-- 사용자가 선택한 해당 상품 갯수 (value 자리에 들어가야함) -->
+	                                            <input type="text" value="${cart.ca_count}" id="cartCountText" readonly>
+	                                        </div>
+	                                    </td>
+	                                    <!-- 상품가격 * 갯수 -->
+	                                    <td class="cart__price">${cart.hap_price}원</td>
+	                                    <td class="cart__close">
+	                                    	<span class="icon_close">
+	                                    		<input type="hidden" value="${cart.ca_num}">
+	                                    	</span>
+	                                    </td>
+	                                </tr>
+	                                <!-- 상품 반복 끝 -->
+                                </c:forEach>
                                 
                             </tbody>
                         </table>
@@ -130,10 +138,10 @@
                     <div class="cart__total">
                         <h6>계산서</h6>
                         <ul>
-                            <li>총 상품금액 <span>양로원</span></li>
-                            <li>배송비 <span>빅원</span></li>
+                            <li>총 상품금액 <span>${totalPrice}원</span></li>
+                            <li>배송비 <span>${textPrice}원</span></li>
                             <hr/>
-                            <li>예상 결제금액 <span>풀무원</span></li>
+                            <li>예상 결제금액 <span>${finalPrice}원</span></li>
                         </ul>
                         <!-- checkOut.do -->
                         <a href="#" class="primary-btn">결제 하기</a>
@@ -237,6 +245,22 @@
 <script src="./resources/js/owl.carousel.min.js"></script>
 <script src="./resources/js/jquery.nicescroll.min.js"></script>
 <script src="./resources/js/main.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	$('.icon_close').click(function(){
+		var ca_num = $(this).children().eq(0).val();
+		window.location = "deleteCartByPk.do?ca_num="+ca_num;
+		
+	});
+	
+	$("#cart_alName").click(function(){
+		var al_num = $(this).children().eq(0).val();
+		window.location = "shopDetails.do?al_num="+al_num;
+	});
+});
+</script>
+
 </body>
 
 </html>

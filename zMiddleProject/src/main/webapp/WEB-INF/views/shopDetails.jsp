@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -41,31 +42,6 @@
     <!-- 상단 고정부분 ( 이후 position pixed 해줘야함 ) -->
     <header class="header">
         <jsp:include page="./mainHeader.jsp" />
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <nav class="header__menu mobile-menu">
-                        <ul>
-                            <li><a href="#">홈</a></li>
-                            <li><a href="#">전체상품</a></li>
-                            <li><a href="#">베스트상품</a></li>
-                            <li><a href="#">할인상품</a>
-                                <!-- <ul class="dropdown">
-                                    <li><a href="shopDetails.do">Shop Details</a></li>
-                                    <li><a href="#">Shoping Cart</a></li>
-                                    <li><a href="#">Check Out</a></li>
-                                    <li><a href="#">Wisslist</a></li>
-                                    <li><a href="#">Class</a></li>
-                                    <li><a href="#">Blog Details</a></li>
-                                </ul> -->
-                            </li>
-                            <li><a href="#">미니어쳐</a></li>
-                            <!-- <li><a href="#">Contact</a></li> -->
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
     </header>
     <!-- Header Section End -->
 	
@@ -105,41 +81,46 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="product__details__text">
-                        <div class="product__label">(해당 술 카테고리명)</div>
-                        <h4>(DB에서 가져온 해당 술 이름)</h4>
-                        <h5>(DB에서 가져온 해당 술 가격)</h5>
-                        <p>(DB에서 가져온 해당 술 정보)</p>
+                        <div class="product__label">${alDetail.ki_name}</div>
+                        <h4>${alDetail.al_name}</h4>
+                        <h5>${alDetail.al_price}원</h5>
+                        <!-- <p>(DB에서 가져온 해당 술 정보)</p> -->
                         <ul>
-                            <li>도수: <span>(DB에서 가져온 해당 술 도수)</span></li>
-                            <li>품종: <span>(DB에서 가져온 해당 술 품종명)</span></li>
-                            <li>제조사: <span>(DB에서 가져온 해당 술 제조사)</span></li>
+                            <li>도수: <span>${alDetail.al_abv}도</span></li>
+                            <li>품종: <span>${alDetail.ki_name}</span></li>
+                            <li>제조사: <span>${alDetail.ma_name}</span></li>
                         </ul>
-                        <div class="product__details__option__full">
-	                        <div class="sul__">
-								<select>
-	                                <option value="" disabled selected>어떤 옵션을 원하시나요?</option>
-	                                <option value="">1</option>
-	                                <option value="">2번 옵션1234</option>
-	                                <option value="">3번 옵션1234</option>
-	                            </select>               	
-	                               <!-- <div class="pro-qty">
-	                                   <input type="text" value="2">	
-	                               </div> -->
-	                            <input type="text" value="0원" class="sul__price" readonly>
-	                               
-	                        </div>
-	                        
-	                        <div class="product__details__option">
-	                        	<div class="quantity">
-	                        		<div class="pro-qty">
-	                            		<input type="" value="1">
-	                            	
-	                            	</div>
-	                        		<a href="#" class="primary-btn">장바구니로</a>
-	                        	</div>
-	                        </div>
-	                	</div>
-	                	
+                        
+                        <form id="cartForm">
+	                        <div class="product__details__option__full">
+		                        <div class="sul__">
+									<select>
+		                                <option value="" disabled >어떤 옵션을 원하시나요?</option>
+		                                <option value="1" selected>${alDetail.al_volume} ml</option>
+		                            </select>               	
+		                               <!-- <div class="pro-qty">
+		                                   <input type="text" value="2">	
+		                               </div> -->
+		                            <input type="text" value="${alDetail.al_price}" class="sul__price" id="alPrice" readonly>
+		                               
+		                        </div>
+		                        
+		                        <div class="product__details__option">
+		                        	<div class="quantity">
+		                        		<div class="pro-qty">
+	
+		                            		<input type="text" value="1" name="ca_count" id="countOption" readonly>
+		                            	
+		                            	</div>
+		                            	<input type='hidden' name="al_num" value="${alDetail.al_num}">
+		                            	<c:if test="${sessionScope.user_num ne null}">
+		                            		<input type="hidden" name="user_num" id="hidden_userNum">
+                                		</c:if>
+		                        		<a href="#" class="primary-btn" id="intoCart">장바구니로</a>
+		                        	</div>
+		                        </div>
+		                	</div>
+	                	</form>
                     </div>
                 </div>
             </div>
@@ -199,6 +180,26 @@
 <script src="./resources/js/owl.carousel.min.js"></script>
 <script src="./resources/js/jquery.nicescroll.min.js"></script>
 <script src="./resources/js/main.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	$("#hidden_userNum").val(${sessionScope.user_num});
+	
+	$("#intoCart").click(function(){
+		
+		if(${sessionScope.user_name eq null}){
+			window.location="login.do"
+		}else{
+			$("#cartForm").attr("action","insertCart.do");
+			$("#cartForm").submit();
+		}
+		
+		
+	});
+	
+});
+</script>
+
 
 </body>
 

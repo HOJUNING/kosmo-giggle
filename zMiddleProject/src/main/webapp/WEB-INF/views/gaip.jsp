@@ -31,16 +31,25 @@
 <script type="text/javascript">
 $(function(){
 	
+	
 	$(".btn-check").click(function(){
 		
+		var regIdPw = RegExp(/^[a-zA-Z0-9]{4,12}$/);
+		var uId = $("#uId").val();
+		
+		if(!regIdPw.test(uId)) {
+			$('#idcheckResult').text("4~12자 영문 대소문자, 숫자만 입력하세요.")
+            $("#uId").focus();
+            return false;
+		}
+		
 		if($(".btn-check").text()=="중복체크") {
-		var new_id = $(this).parent().children().eq(1).val();
 		$.ajax({
 			
 			type 		: 'post',
 			url  		: 'idCheck.do',
 			contentType : 'application/x-www-form-urlencoded;charset=UTF-8', 
-			data 		: { user_id : new_id },
+			data 		: { user_id : uId },
 			success 	: idCheck
 			
 		}); // end of $.ajax
@@ -67,21 +76,47 @@ $(function(){
 	
 	$("#registUser").click(function(){
 		
+		var regIdPw = RegExp(/^[a-zA-Z0-9]{4,12}$/);
+		var regName = RegExp(/^[가-힣]{2,8}$/);
+		var uId = $("#uId").val();
+		var uPw = $("#user_pass").val();
+		var uName = $("#uName").val();
+		
 		$('#idcheckResult').empty();
 		$('#passResult').empty();
+		$('#nameReuslt').empty();
 		
 		var pass = $("#user_pass").val();
 		var passCk = $("#passConfirm").val();
 		
-		if($(".btn-check").text()!="완료"){
+		if(uId==""){
+			$('#idcheckResult').text("아이디를 입력하세요")
+			$("#uId").focus()
+			return false;
+		}else if($(".btn-check").text()!="완료"){
 			$('#idcheckResult').text("아이디 중복체크를 해주세요");
+			$("#uId").focus()
 			return false;
 		}else if (pass!=passCk){
 			$('#passResult').text("비밀번호가 일치하지 않습니다");
+			$("#passConfirm").focus()
 			return false;
-		}
+		}else if (!regIdPw.test(uPw)){
+			$('#passResult').text("4~12자 영문 대소문자, 숫자만 입력해주세요.")
+			$("#user_pass").focus();
+			return false;
+		}else if(uId == uPw){
+			$('#passResult').text("아이디와 동일한 비밀번호를 사용할 수 없습니다.")
+            $("#user_pass").focus();
+            return false;
+        }else if(!regName.test(uName)){
+        	$('#nameResult').text("2~8자 한글만 입력해주세요.")
+        	$("#uName").focus();
+        	return false;
+        }
 		
-		$("#registForm").attr("action","registUser")
+		
+		$("#registForm").attr("action","registUser.do")
 		$("#registForm").submit();
 		
 	});
@@ -118,14 +153,13 @@ $(function(){
             </div>
             <div class="join_cell__body">
               <div id='idcheckResult'> </div>
-              <input class="idInput" type="text" name="user_id" maxlength="50" placeholder="ID 입력">
+              <input class="idInput" type="text" name="user_id" id="uId" maxlength="50" placeholder="ID 입력">
               <button class="btn2 btn-check" name="dupIdCheck" type="button">중복체크</button>
             </div>
             <div class="join_cell__title">
               <span>비밀번호</span>
             </div>
             <div class="join_cell__body">
-              <div id='passResult'> </div>
               <input type="password" name="user_pass" id="user_pass" maxlength="50" placeholder="PW 입력">
             </div>
             <div class="join_cell__title">
@@ -133,12 +167,14 @@ $(function(){
             </div>
             <div class="join_cell__body">
               <input type="password" id="passConfirm" maxlength="50" placeholder="PW 입력">
+              <div id='passResult'> </div>
             </div>
             <div class="join_cell__title">
               <span>닉네임</span>
             </div>
             <div class="join_cell__body">
-              <input type="text" name="user_name" maxlength="50" placeholder="닉네임 입력">
+              <input type="text" name="user_name" id="uName" maxlength="50" placeholder="닉네임 입력">
+              <div id='nameResult'></div>
             </div>
             <div class="joinInput-cell">
               <button class="btn2 btn-go" type="button" id="registUser"><i class="fas fa-sign-in-alt"></i> 회원가입</button>

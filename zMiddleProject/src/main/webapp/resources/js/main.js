@@ -206,6 +206,8 @@
 		Quantity change
 	--------------------- */
     var proQty = $('.pro-qty');
+    var onePrice = $('#alPrice').val();
+    $('#alPrice').val(onePrice+"원");
     proQty.prepend('<span class="dec qtybtn">-</span>');
     proQty.append('<span class="inc qtybtn">+</span>');
     proQty.on('click', '.qtybtn', function () {
@@ -215,15 +217,16 @@
             var newVal = parseFloat(oldValue) + 1;
         } else {
             // Don't allow decrementing below zero
-            if (oldValue > 0) {
+            if (oldValue > 1) {
                 var newVal = parseFloat(oldValue) - 1;
             } else {
-                newVal = 0;
+                newVal = 1;
             }
         }
         $button.parent().find('input').val(newVal);
+        $('#alPrice').val(onePrice*newVal+"원");
     });
-
+	
     
 
     $(".product__details__thumb").niceScroll({

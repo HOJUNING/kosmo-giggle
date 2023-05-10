@@ -61,8 +61,9 @@
                                     </c:if>
                                     
                                     <c:if test="${sessionScope.user_name ne null}">
-                                		<a href="cart.do"><img src="./resources/img/icon/cart.png" alt=""> <span>${sessionScope.countCA}</span></a>
+                                		<a href="cart.do?user_num=${sessionScope.user_num}"><img src="./resources/img/icon/cart.png" alt=""> <span>${sessionScope.countCA}</span></a>
                                     	<div class="cart__price">장바구니: <span>${sessionScope.priceCA} 원</span></div>
+                                    	
                                 	</c:if>
                                 </div>
                             </div>
