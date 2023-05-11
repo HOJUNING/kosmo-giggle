@@ -19,12 +19,47 @@ public class AlcoholDetailVO {
 	private String dt_iname; // 사진 이름
 	private String dt_realiname; // 저장된 이름
 	private String dt_isize; // 사진크기
-	
+	private int sale_price; // 할인가격S
+	private Integer ki_num; // 종류번호
+	private Integer ma_num; // 양조장번호
+	private Integer evt_num; // 이벤트 번호
+	private Integer al_stock; // 재고
+
+	public Integer getKi_num() {
+		return ki_num;
+	}
+	public void setKi_num(Integer ki_num) {
+		this.ki_num = ki_num;
+	}
+	public Integer getMa_num() {
+		return ma_num;
+	}
+	public void setMa_num(Integer ma_num) {
+		this.ma_num = ma_num;
+	}
+	public Integer getEvt_num() {
+		return evt_num;
+	}
+	public void setEvt_num(Integer evt_num) {
+		this.evt_num = evt_num;
+	}
+	public Integer getAl_stock() {
+		return al_stock;
+	}
+	public void setAl_stock(Integer al_stock) {
+		this.al_stock = al_stock;
+	}
+	public int getSale_price() {
+		return sale_price;
+	}
+	public void setSale_price(int sale_price) {
+		this.sale_price = sale_price;
+	}
 	private String img_name; // 메인 이미지 이름
 	private String img_realname; // 메인 이미지 리얼이름
 	private int img_size; // 이미지 크기
-	
-	
+
+
 	public String getImg_name() {
 		return img_name;
 	}
@@ -145,9 +180,9 @@ public class AlcoholDetailVO {
 	public void setDt_isize(String dt_isize) {
 		this.dt_isize = dt_isize;
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 }

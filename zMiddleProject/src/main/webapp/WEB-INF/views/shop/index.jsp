@@ -18,7 +18,7 @@
     rel="stylesheet">
 
 	<!-- 빠삐콘 -->
-	<link rel="shortcut icon" href="${pageContext.request.contextPath}//resources/img/favicon.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/img/favicon.png" type="image/x-icon" />
     <!-- Css Styles -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/flaticon.css" type="text/css">

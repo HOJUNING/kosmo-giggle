@@ -137,7 +137,13 @@
 		                        </div>
 		                        <div class="product__item__text">
 		                            <h6><a href="shopDetails.do?al_num=${alc.al_num}">${alc.al_name}</a></h6>
-		                            <div class="product__item__price">${alc.al_price}원</div>
+		                            <c:if test="${alc.sale_price eq '0'}">
+		                            	<div class="product__item__price">${alc.al_price}원</div>
+		                            </c:if>
+		                            <c:if test="${alc.sale_price ne '0'}">
+			                            <div class="product__item__saleprice">${alc.al_price}원</div>
+			                            <div class="product__item__price">${alc.sale_price}원</div>
+		                            </c:if>
 		                            <div class="cart_add">
 		                                <a href="shopDetails.do?al_num=${alc.al_num}">상세 페이지로</a>
 		                            </div>

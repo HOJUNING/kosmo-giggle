@@ -1216,6 +1216,18 @@ ol {
   -o-transition: all, 0.3s;
   transition: all, 0.3s;
 }
+.product__item__saleprice {
+  text-decoration:line-through;
+  }
+
+.product__item__text .product__item__saleprice {
+  text-decoration:line-through;
+  color: #111111;
+  font-size: 14px;
+  -webkit-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  transition: all, 0.3s;
+}
 .product__item__text .cart_add {
   position: absolute;
   left: 0;

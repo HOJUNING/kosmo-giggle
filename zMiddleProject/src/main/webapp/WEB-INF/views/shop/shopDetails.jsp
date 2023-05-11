@@ -50,40 +50,26 @@
     <section class="product-details spad">
         <div class="container">
             <div class="row">
+            	<!-- 메인사진 -->
                 <div class="col-lg-6">
                     <div class="product__details__img">
                         <div class="product__details__big__img">
                             <img class="big_img" src=".././resources/upload/${alDetail.img_name}" alt="">
                         </div>
-                        <!-- <div class="product__details__thumb">
-                            <div class="pt__item active">
-                                <img data-imgbigurl=".././resources/img/shop/details/product-big-2.jpg"
-                                src=".././resources/img/shop/details/product-big-2.jpg" alt="">
-                            </div>
-                            <div class="pt__item">
-                                <img data-imgbigurl=".././resources/img/shop/details/product-big-1.jpg"
-                                src=".././resources/img/shop/details/product-big-1.jpg" alt="">
-                            </div>
-                            <div class="pt__item">
-                                <img data-imgbigurl=".././resources/img/shop/details/product-big-4.jpg"
-                                src=".././resources/img/shop/details/product-big-4.jpg" alt="">
-                            </div>
-                            <div class="pt__item">
-                                <img data-imgbigurl=".././resources/img/shop/details/product-big-3.jpg"
-                                src=".././resources/img/shop/details/product-big-3.jpg" alt="">
-                            </div>
-                            <div class="pt__item">
-                                <img data-imgbigurl=".././resources/img/shop/details/product-big-5.jpg"
-                                src=".././resources/img/shop/details/product-big-5.jpg" alt="">
-                            </div>
-                        </div> -->
                     </div>
                 </div>
+                
                 <div class="col-lg-6">
                     <div class="product__details__text">
                         <div class="product__label">${alDetail.ki_name}</div>
                         <h4>${alDetail.al_name}</h4>
-                        <h5>${alDetail.al_price}원</h5>
+                        <c:if test="${alDetail.sale_price eq '0'}">
+		                      <h5>${alDetail.al_price}원</h5>
+		                </c:if>
+		                <c:if test="${alDetail.sale_price ne '0'}">
+			            	<div class="product__item__saleprice">${alDetail.al_price}원</div>
+			            	<h5>${alDetail.sale_price}원</h5>
+		                </c:if>
                         <!-- <p>(DB에서 가져온 해당 술 정보)</p> -->
                         <ul>
                             <li>도수: <span>${alDetail.al_abv}도</span></li>
@@ -101,8 +87,12 @@
 		                               <!-- <div class="pro-qty">
 		                                   <input type="text" value="2">	
 		                               </div> -->
-		                            <input type="text" value="${alDetail.al_price}" class="sul__price" id="alPrice" readonly>
-		                               
+									<c:if test="${alDetail.sale_price eq '0'}">
+		                      			<input type="text" value="${alDetail.al_price}" class="sul__price" id="alPrice" readonly>
+		                			</c:if>
+		                			<c:if test="${alDetail.sale_price ne '0'}">
+			            				<input type="text" value="${alDetail.sale_price}" class="sul__price" id="alPrice" readonly>
+		                			</c:if>
 		                        </div>
 		                        
 		                        <div class="product__details__option">

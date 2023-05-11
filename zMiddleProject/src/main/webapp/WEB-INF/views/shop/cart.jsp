@@ -248,13 +248,13 @@
 <script type="text/javascript">
 $(function(){
 	
-	$('.icon_close').click(function(){
+	$('.icon_close').on("click",function(){
 		var ca_num = $(this).children().eq(0).val();
 		window.location = "deleteCartByPk.do?ca_num="+ca_num;
 		
 	});
 	
-	$("#cart_alName").click(function(){
+	$("#cart_alName").on("click",function(){
 		var al_num = $(this).children().eq(0).val();
 		window.location = "shopDetails.do?al_num="+al_num;
 	});

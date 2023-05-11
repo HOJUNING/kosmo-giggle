@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 
 import com.javaclass.project.domain.AlcoholDetailVO;
 import com.javaclass.project.domain.AlcoholsPriceVO;
-import com.javaclass.project.domain.AlcoholsVO;
 import com.javaclass.project.domain.CartVO;
 import com.javaclass.project.domain.UsersVO;
 
@@ -46,7 +45,7 @@ public class MainDAOImpl implements MainDAO {
 	}
 
 	@Override
-	public List<AlcoholsVO> alcoholsList(AlcoholsVO vo) {
+	public List<AlcoholDetailVO> alcoholsList(AlcoholDetailVO vo) {
 		return mybatis.selectList("project.mainMapper.alcoholsList",vo);
 	}
 
@@ -74,6 +73,27 @@ public class MainDAOImpl implements MainDAO {
 	public void deleteCartByPk(CartVO vo) {
 		mybatis.delete("project.mainMapper.deleteCartByPk",vo);
 		
+	}
+
+	@Override
+	public List<AlcoholDetailVO> selectCak(AlcoholDetailVO vo) {
+		return mybatis.selectList("project.mainMapper.selectCak",vo);
+	}
+
+	@Override
+	public List<AlcoholDetailVO> selectSale(AlcoholDetailVO vo) {
+		return mybatis.selectList("project.mainMapper.selectSale",vo);
+	}
+
+	@Override
+	public List<AlcoholDetailVO> selectAll(AlcoholDetailVO vo) {
+		return mybatis.selectList("project.mainMapper.selectAll",vo);
+	}
+
+	@Override
+	public List<AlcoholDetailVO> selectMini(AlcoholDetailVO vo) {
+		// TODO Auto-generated method stub
+		return mybatis.selectList("project.mainMapper.selectMini",vo);
 	}
 	
 	

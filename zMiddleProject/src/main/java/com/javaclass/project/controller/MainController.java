@@ -1,5 +1,6 @@
 package com.javaclass.project.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -13,7 +14,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.javaclass.project.domain.AlcoholDetailVO;
 import com.javaclass.project.domain.AlcoholsPriceVO;
-import com.javaclass.project.domain.AlcoholsVO;
 import com.javaclass.project.domain.CartVO;
 import com.javaclass.project.domain.UsersVO;
 import com.javaclass.project.service.MainService;
@@ -85,8 +85,14 @@ public class MainController {
 	}
 	
 	@RequestMapping("/shopSubCate.do")
-	public void shopSubCate(AlcoholsVO vo, Model m) {
-		List<AlcoholsVO> list = mainService.alcoholsList(vo);
+	public void shopSubCate(AlcoholDetailVO vo, Model m) {
+		List<AlcoholDetailVO> list = mainService.alcoholsList(vo);
+		
+		for(AlcoholDetailVO avo : list) {
+			if(avo.getEvt_per()!=0) {
+				avo.setSale_price( avo.getAl_price() - avo.getAl_price()/avo.getEvt_per() );
+			}
+		}
 		
 		m.addAttribute("alSubList", list);
 		m.addAttribute("kiName",list.get(0).getKi_name());
@@ -96,6 +102,10 @@ public class MainController {
 	@RequestMapping("/shopDetails.do")
 	public void shopDetails(AlcoholDetailVO vo ,Model m) {
 		AlcoholDetailVO result = mainService.alcoholDetail(vo);
+		
+		if(result.getEvt_per()!=0) {
+			result.setSale_price( result.getAl_price() - result.getAl_price()/result.getEvt_per() );
+		}
 		
 		m.addAttribute("alDetail", result);
 		
@@ -139,7 +149,7 @@ public class MainController {
 			sess.setAttribute("countCA", list.size());
 			for(CartVO cv: list) {
 				AlcoholsPriceVO alVO = mainService.selectAlcoholsByPk(cv.getAl_num());
-				int thisAlprice = alVO.getAl_price() + alVO.getAl_price() * alVO.getEvt_per();
+				int thisAlprice = alVO.getAl_price() - alVO.getAl_price() / alVO.getEvt_per();
 				sumPrice += thisAlprice * cv.getCa_count();
 				
 			}
@@ -200,7 +210,7 @@ public class MainController {
 			sess.setAttribute("countCA", list.size());
 			for(CartVO cv: list) {
 				AlcoholsPriceVO alVO = mainService.selectAlcoholsByPk(cv.getAl_num());
-				int thisAlprice = alVO.getAl_price() + alVO.getAl_price() * alVO.getEvt_per();
+				int thisAlprice = alVO.getAl_price() - alVO.getAl_price() / alVO.getEvt_per();
 				sumPrice += thisAlprice * cv.getCa_count();
 				
 			}
@@ -213,8 +223,50 @@ public class MainController {
 		sess.setAttribute("user_num", result.getUser_num());
 		
 		
-		return "redirect:cart.do";
+		return "redirect:cart.do?user_num="+result.getUser_num();
 	}
 	
+	@RequestMapping("/shop.do")
+	public void shop(AlcoholDetailVO vo ,Model m) {
+		List<AlcoholDetailVO> caktail = mainService.selectCak(vo);
+		List<AlcoholDetailVO> sale = mainService.selectSale(vo);
+		
+		for(AlcoholDetailVO avo : sale) {
+			avo.setSale_price( avo.getAl_price() - avo.getAl_price()/avo.getEvt_per() );
+		}
+		
+		for(AlcoholDetailVO avo : caktail) {
+			if(avo.getEvt_per()!=0) {
+				avo.setSale_price( avo.getAl_price() - avo.getAl_price()/avo.getEvt_per() );
+			}
+		}
+		
+		m.addAttribute("caktail", caktail);
+		m.addAttribute("sale", sale);
+		
+	}
+	
+	@RequestMapping("/shopCate.do")
+	public void shopCate(AlcoholDetailVO vo, Model m) {
+		
+		List<AlcoholDetailVO> list = new ArrayList<AlcoholDetailVO>();
+		
+		if(vo.getKi_name().equals("전체상품")) {
+			list = mainService.selectAll(vo);
+		}else if(vo.getKi_name().equals("할인상품")) {
+			list = mainService.selectSale(vo);
+		}else if(vo.getKi_name().equals("미니어쳐")) {
+			list = mainService.selectMini(vo);
+		}
+		
+		for(AlcoholDetailVO avo : list) {
+			if(avo.getEvt_per()!=0)
+				avo.setSale_price( avo.getAl_price() - avo.getAl_price()/avo.getEvt_per() );
+		}
+		
+		m.addAttribute("alList", list);
+		m.addAttribute("mainName", vo.getKi_name());
+
+	}
 	
 }

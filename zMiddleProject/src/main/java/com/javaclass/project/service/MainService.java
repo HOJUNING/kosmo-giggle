@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.javaclass.project.domain.AlcoholDetailVO;
 import com.javaclass.project.domain.AlcoholsPriceVO;
-import com.javaclass.project.domain.AlcoholsVO;
 import com.javaclass.project.domain.CartVO;
 import com.javaclass.project.domain.UsersVO;
 
@@ -20,7 +19,7 @@ public interface MainService {
 	
 	public void registUser(UsersVO vo);
 	
-	public List<AlcoholsVO> alcoholsList(AlcoholsVO vo);
+	public List<AlcoholDetailVO> alcoholsList(AlcoholDetailVO vo);
 	
 	public AlcoholDetailVO alcoholDetail(AlcoholDetailVO vo);
 	
@@ -31,5 +30,14 @@ public interface MainService {
 	public CartVO howsCartItem(CartVO vo);
 	
 	public void deleteCartByPk(CartVO vo);
+	
+	public List<AlcoholDetailVO> selectCak(AlcoholDetailVO vo);
+	
+	public List<AlcoholDetailVO> selectSale(AlcoholDetailVO vo);
+	
+	public List<AlcoholDetailVO> selectAll(AlcoholDetailVO vo);
+	
+	public List<AlcoholDetailVO> selectMini(AlcoholDetailVO vo);
+	
 	
 }

@@ -27,13 +27,13 @@
   font-size: 60px;
   font-style: normal;
 }
-
+.flaticon-00-strawberry:before { url : "images/circle.png" }
 .flaticon-001-strawberry:before { content: "\f100"; }
 .flaticon-002-cake-14:before { content: "\f101"; }
 .flaticon-003-cake-13:before { content: "\f102"; }
 .flaticon-004-piece-of-cake:before { content: "\f103"; }
-.flaticon-005-pancake:before { content: "\f104"; }
-.flaticon-006-macarons:before { content: "\f105"; }
+.flaticon-005-pancake:before { content: url("../img/icon/yak.png"); }
+.flaticon-006-macarons:before { content: url("../img/icon/set.png"); }
 .flaticon-007-cake-12:before { content: "\f106"; }
 .flaticon-008-lollipop-1:before { content: "\f107"; }
 .flaticon-009-lollipop:before { content: "\f108"; }
@@ -56,12 +56,12 @@
 .flaticon-026-cupcake-6:before { content: "\f119"; }
 .flaticon-027-cupcake-5:before { content: "\f11a"; }
 .flaticon-028-cupcake-4:before { content: "\f11b"; }
-.flaticon-029-cupcake-3:before { content: "\f11c"; }
-.flaticon-030-cupcake-2:before { content: "\f11d"; }
+.flaticon-029-cupcake-3:before { content: url("../img/icon/tak.png"); }
+.flaticon-030-cupcake-2:before { content: url("../img/icon/cak.png"); }
 .flaticon-031-cupcake-1:before { content: "\f11e"; }
 .flaticon-032-cupcake:before { content: "\f11f"; }
 .flaticon-033-cake-10:before { content: "\f120"; }
-.flaticon-034-chocolate-roll:before { content: "\f121"; }
+.flaticon-034-chocolate-roll:before { content: url("../img/icon/jak.png"); }
 .flaticon-035-cake-9:before { content: "\f122"; }
 .flaticon-036-chocolate-1:before { content: "\f123"; }
 .flaticon-037-chocolate:before { content: "\f124"; }

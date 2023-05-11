@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.javaclass.project.dao.MainDAO;
 import com.javaclass.project.domain.AlcoholDetailVO;
 import com.javaclass.project.domain.AlcoholsPriceVO;
-import com.javaclass.project.domain.AlcoholsVO;
 import com.javaclass.project.domain.CartVO;
 import com.javaclass.project.domain.UsersVO;
 
@@ -49,7 +48,7 @@ public class MainServiceImpl implements MainService {
 	}
 
 	@Override
-	public List<AlcoholsVO> alcoholsList(AlcoholsVO vo) {
+	public List<AlcoholDetailVO> alcoholsList(AlcoholDetailVO vo) {
 		return mainDAO.alcoholsList(vo);
 	}
 
@@ -78,6 +77,26 @@ public class MainServiceImpl implements MainService {
 	public void deleteCartByPk(CartVO vo) {
 		mainDAO.deleteCartByPk(vo);
 		
+	}
+
+	@Override
+	public List<AlcoholDetailVO> selectCak(AlcoholDetailVO vo) {
+		return mainDAO.selectCak(vo);
+	}
+
+	@Override
+	public List<AlcoholDetailVO> selectSale(AlcoholDetailVO vo) {
+		return mainDAO.selectSale(vo);
+	}
+
+	@Override
+	public List<AlcoholDetailVO> selectAll(AlcoholDetailVO vo) {
+		return mainDAO.selectAll(vo);
+	}
+
+	@Override
+	public List<AlcoholDetailVO> selectMini(AlcoholDetailVO vo) {
+		return mainDAO.selectMini(vo);
 	}
 
 }
