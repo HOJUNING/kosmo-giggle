@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.javassem.domain.ManageVO;
 import com.javassem.domain.RegisterDetailVO;
+import com.javassem.domain.RegisterFlavorVO;
 
 @Repository("manageDAO") // 서비스에서 선언한 manageDAO
 public class ManageDAOImpl implements ManageDAO {
@@ -40,8 +41,8 @@ public class ManageDAOImpl implements ManageDAO {
 	@Override
 	public void deleteProduct(ManageVO vo) {
 		System.out.println("Mybatis deleteProduct 호출");
-	mybatis.delete("ManageDAO.deleteProduct", vo);
-	
+		int result = mybatis.delete("ManageDAO.deleteProduct", vo);
+			
 	}
 
 	@Override
@@ -54,6 +55,30 @@ public class ManageDAOImpl implements ManageDAO {
 		System.out.println("Mybatis insertImage 호풀");
 		System.out.println(ivo);
 	  mybatis.insert("ManageDAO.insertImage",ivo);
+	  mybatis.update("ManageDAO.updateOpic",ivo);
+		
+	}
+
+	@Override
+	public void insertFlavor(RegisterFlavorVO fvo) {
+		System.out.println("Mybatis insertFlavor 호출");
+		mybatis.insert("ManageDAO.insertFlavor", fvo);
+	}
+
+	@Override
+	public void deleteImage(RegisterDetailVO ivo) {
+		System.out.println("Mybatis deleteImage 호출");
+		int result = mybatis.delete("ManageDAO.deleteImage", ivo);
+		if(result==1) {
+			mybatis.update("ManageDAO.deleteOpic",ivo);
+		}
+	}
+
+	@Override
+	public void deleteFlavor(RegisterFlavorVO fvo) {
+		System.out.println("Mybatis deleteFlavor 호출");
+		int result = mybatis.delete("ManageDAO.deleteFlavor", fvo);
+		
 		
 	}
 

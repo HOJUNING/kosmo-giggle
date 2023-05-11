@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+   
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,18 +75,18 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.do">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>매출관리</span></a>
-            </li>
-
             <!-- Nav Item - Tables -->
             <li class="nav-item active">
                 <a class="nav-link" href="tables.do">
                     <i class="fas fa-fw fa-table"></i>
                     <span>문의관리</span></a>
+            </li>
+            
+            <!--Nav Item - shop -->
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8080/basic/shop/index.do">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>쇼핑몰로</span></a>
             </li>
 
             <!-- Divider -->
@@ -449,9 +450,9 @@
     		if(btn.val().trim()=='수정'){
     			location.href='productModify.do?al_num='+al_num;
     		}else if(btn.val().trim()=='삭제'){
-    			location.href='delete.do?al_num='+al_num;
+    			location.href='deletePage.do?al_num='+al_num;
     		}else if(btn.val().trim()=='맛등록'){
-    			location.href='flavor.do?al_num='+al+num;
+    			location.href='registerFlavor.do?al_num='+al_num;
     		}else if(btn.val().trim()=='상세등록'){
     			location.href='registerDetail.do?al_num='+al_num;
     		}

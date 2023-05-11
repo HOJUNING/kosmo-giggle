@@ -1,16 +1,21 @@
 package com.javassem.domain;
 
 public class QnaListVO {
-	private int pi_num;
-	private String board_catename;
-	private String user_name;
-	private String pi_title;
-	private String pi_wdate;
+	//문의관리 멤번변수선언
 	
-	public int getPi_num() {
+	private Integer pi_num;			// 글 번호
+	private String  board_catename; // 카테고리 이름
+	private String  user_name;		// 작성자
+	private String  pi_title;		// 글제목	
+	private String  pi_wdate;		// 작성일시
+	private Integer pi_count;		// 조회수
+
+	// Getter and Setter 선언
+	
+	public Integer getPi_num() {
 		return pi_num;
 	}
-	public void setPi_num(int pi_num) {
+	public void setPi_num(Integer pi_num) {
 		this.pi_num = pi_num;
 	}
 	public String getBoard_catename() {
@@ -38,4 +43,10 @@ public class QnaListVO {
 		this.pi_wdate = pi_wdate;
 	}
 	
+	// toString 선언
+	 @Override
+	public String toString() {
+		return "QnaListVO [pi_num=" + pi_num + ", board_catename=" + board_catename + ", user_name=" + user_name
+				+ ", pi_title=" + pi_title + ", pi_wdate=" + pi_wdate + ", pi_count=" + pi_count + "]";
+	}
 }

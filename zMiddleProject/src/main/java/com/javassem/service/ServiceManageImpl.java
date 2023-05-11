@@ -9,6 +9,7 @@ import com.javassem.dao.ManageDAO;
 import com.javassem.dao.ManageDAOImpl;
 import com.javassem.domain.ManageVO;
 import com.javassem.domain.RegisterDetailVO;
+import com.javassem.domain.RegisterFlavorVO;
 
 @Service("serviceManage") // controller에서 선언한 serviceManage
 public class ServiceManageImpl implements ManageDAO {
@@ -43,8 +44,23 @@ public class ServiceManageImpl implements ManageDAO {
 
 	@Override
 	public void insertImage(RegisterDetailVO ivo) {
-		manageDAO.insertImage(ivo);
+		manageDAO.insertImage(ivo);	
+	}
+
+	@Override
+	public void insertFlavor(RegisterFlavorVO fvo) {
+		manageDAO.insertFlavor(fvo);
+	}
+
+	@Override
+	public void deleteImage(RegisterDetailVO ivo) {
+		manageDAO.deleteImage(ivo);
 		
+	}
+
+	@Override
+	public void deleteFlavor(RegisterFlavorVO fvo) {
+		manageDAO.deleteFlavor(fvo);
 	}
 
 }

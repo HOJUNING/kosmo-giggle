@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.javassem.domain.ManageVO;
 import com.javassem.domain.RegisterDetailVO;
+import com.javassem.domain.RegisterFlavorVO;
 
 public interface ServiceManage {
 	
@@ -18,4 +19,10 @@ public interface ServiceManage {
 	ManageVO selectProductByPk(ManageVO vo);
 	
 	void insertImage(RegisterDetailVO ivo);
+	
+	void deleteImage(RegisterDetailVO ivo);
+	
+	void insertFlavor(RegisterFlavorVO fvo);
+	
+	void deleteFlavor(RegisterFlavorVO fvo);
 }

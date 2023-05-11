@@ -67,13 +67,6 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.do">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>매출관리</span></a>
-            </li>
-
             <!--Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="tables.do">
@@ -81,9 +74,9 @@
                     <span>문의관리</span></a>
             </li>
             
-            <!--Nav Item - Tables -->
+            <!--Nav Item - shop -->
             <li class="nav-item">
-                <a class="nav-link" href="http://192.168.0.69:8080/basic/shop/index.do">
+                <a class="nav-link" href="http://localhost:8080/basic/shop/index.do">
                     <i class="fas fa-fw fa-table"></i>
                     <span>쇼핑몰로</span></a>
             </li>
@@ -314,7 +307,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                        <h1 class="h3 mb-0 text-gray-800">대시보드</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>

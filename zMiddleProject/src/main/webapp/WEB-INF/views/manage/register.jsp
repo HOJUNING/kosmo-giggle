@@ -46,7 +46,7 @@
                                 	<div class="col-sm-6 mb-3 mb-sm-0">
                                 		<hr> 
                                     	<input type="text"  class="form-control form-control-user" name="ki_num" placeholder="종류번호">
-                             
+                 
                                     </div>
                                     
                                     <div class="col-sm-6 mb-3 mb-sm-0">
@@ -94,15 +94,9 @@
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                     	<hr>
                                     	<input type="text"  class="form-control form-control-user" name="al_status" placeholder="재고상태">
-                             
+                 
                                     </div>
-                                    
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                    	<hr>
-                                    	<input type="text" class="form-control form-control-user" name="al_opic" placeholder="주류사진">
-                    
-                                    </div>
-                                   
+                                 
                                   </div> 
                                 <input type="submit" class="btn btn-primary btn-user btn-block" value="상품등록">
                                     

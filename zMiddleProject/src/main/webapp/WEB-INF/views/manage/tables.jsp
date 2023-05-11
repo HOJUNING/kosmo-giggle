@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>관리자 페이지</title>
+    <title>문의관리 페이지</title>
 
     <!-- Custom fonts for this template -->
     <link href=".././resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -56,7 +56,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-               <a>문의 내역</a>
+               <a>문의 관리</a>
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -74,18 +74,18 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.do">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>매출내역</span></a>
-            </li>
-
             <!-- Nav Item - Tables -->
             <li class="nav-item active">
                 <a class="nav-link" href="tables.do">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>문의내용</span></a>
+                    <span>문의 관리</span></a>
+            </li>
+            
+            <!--Nav Item - shop -->
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8080/basic/shop/index.do">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>쇼핑몰로</span></a>
             </li>
 
             <!-- Divider -->
@@ -318,7 +318,7 @@
                     <h1 class="h3 mb-2 text-gray-800">문의내역</h1>
                     <p class="mb-4">문의 글 리스트</p>
 
-                    <!-- DataTales Example -->
+                    <!-- 문의글 전체 리스트 -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">문의 내역</h6>
@@ -350,10 +350,8 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <!-- /.container-fluid -->
-
+                <!-- 문의글 전체 리스트 끝 -->
             </div>
             <!-- End of Main Content -->
 

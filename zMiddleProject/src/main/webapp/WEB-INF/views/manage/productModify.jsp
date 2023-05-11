@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>관리자 페이지</title>
+    <title>상품 수정페이지</title>
 
     <!-- Custom fonts for this template-->
     <link href=".././resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -28,8 +28,6 @@
 
 <body id="page-top">
 
-
-
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -41,7 +39,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">상품 수정페이지</sup></div>
             </a>
 
             <!-- Divider -->
@@ -53,9 +51,8 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>관리자 페이지</span></a>
             </li>
-
-      
-            <div class="sidebar-heading">
+	    
+	    <div class="sidebar-heading">
                <a>관리자기능</a>
             </div>
 
@@ -75,18 +72,18 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.do">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>매출관리</span></a>
-            </li>
-
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="tables.do">
                     <i class="fas fa-fw fa-table"></i>
                     <span>문의관리</span></a>
+            </li>
+
+			<!--Nav Item - shop -->
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8080/basic/shop/index.do">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>쇼핑몰로</span></a>
             </li>
 
             <!-- Divider -->
@@ -120,16 +117,15 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">상품수정/삭제 페이지</h1>
+                    <h1 class="h3 mb-4 text-gray-800">상품수정 페이지</h1>
 
                 </div>
                 
-                <!-- /.container-fluid -->
-                <!-- 등록된 상품 수정하는 파트-->
+                <!-- 등록된 상품 수정 파트 시작-->
                 
 				  <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">수정 및 삭제 해주세요</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">수정 해주세요</h6>
                         </div>
                         <div class="card-body">
                         	<form class="user" method="get" action="modify.do">
@@ -167,13 +163,22 @@
                                     <input type="text" class="form-control form-control-user"
                                        name="al_status" placeholder="주류 재고상태 : ${alVO.al_status}">
                                 </div>
+                                
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user"
+                                       name="evt_num" placeholder="이벤트번호 : ${alVO.evt_num}">
+                                </div>
+                                
                                  <input type="hidden" name="al_num" value="${alVO.al_num}">
                                  <input type="submit" class="btn btn-primary btn-user btn-block" value="상품수정">
                             </form>  
                             
-					</div>
-				</div> 
+					    </div>
+				  </div> 
               </div>
+              
+              <!-- 등록된 상품 수정 파트 끝 -->
+            
             <!-- End of Main Content -->
 
             <!-- Footer -->
