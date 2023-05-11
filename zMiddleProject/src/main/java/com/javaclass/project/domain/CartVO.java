@@ -9,7 +9,21 @@ public class CartVO {
 	private int al_price;
 	private String al_name;
 	private int hap_price;
+	private int sale_price; // 할인가격S
+	private int evt_per; // 할인률
 	
+	public int getSale_price() {
+		return sale_price;
+	}
+	public void setSale_price(int sale_price) {
+		this.sale_price = sale_price;
+	}
+	public int getEvt_per() {
+		return evt_per;
+	}
+	public void setEvt_per(int evt_per) {
+		this.evt_per = evt_per;
+	}
 	private String img_name; // 메인 이미지 이름
 	private String img_realname; // 메인 이미지 리얼이름
 	private int img_size; // 이미지 크기

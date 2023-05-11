@@ -20,6 +20,8 @@
 						ON ca.al_num=al.al_num
 					  INNER JOIN AL_MAINIMG img
                     	on ca.al_num=img.al_num
+                     INNER JOIN AL_EVENTS evt
+						on al.evt_num=evt.evt_num 
 		WHERE USER_NUM=#{user_num}
 
 	</select>

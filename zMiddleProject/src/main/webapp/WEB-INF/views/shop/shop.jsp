@@ -173,7 +173,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
-                        <a href="#">더보기</a>
+                        <a href="shopCate.do?ki_name=할인상품">더보기</a>
                         <!-- <span>Shop</span> -->
                     </div>
                 </div>

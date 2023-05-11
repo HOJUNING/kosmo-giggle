@@ -11,7 +11,6 @@ public class AlcoholDetailVO {
 	private String  al_status; // 재고상태
 	private String  al_opic; // 주류사진
 	private String ki_name; // 종류 이름
-	private int evt_per; // 할인률
 	private int fl_danmat; // 단맛
 	private int fl_sinmat; // 신맛
 	private int fl_tansan; // 탄산
@@ -20,6 +19,7 @@ public class AlcoholDetailVO {
 	private String dt_realiname; // 저장된 이름
 	private String dt_isize; // 사진크기
 	private int sale_price; // 할인가격S
+	private int evt_per; // 할인률
 	private Integer ki_num; // 종류번호
 	private Integer ma_num; // 양조장번호
 	private Integer evt_num; // 이벤트 번호

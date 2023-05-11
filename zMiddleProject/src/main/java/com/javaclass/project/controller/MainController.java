@@ -149,7 +149,10 @@ public class MainController {
 			sess.setAttribute("countCA", list.size());
 			for(CartVO cv: list) {
 				AlcoholsPriceVO alVO = mainService.selectAlcoholsByPk(cv.getAl_num());
-				int thisAlprice = alVO.getAl_price() - alVO.getAl_price() / alVO.getEvt_per();
+				int thisAlprice = alVO.getAl_price();
+				if(alVO.getEvt_per()!=0) {
+					thisAlprice = alVO.getAl_price() - alVO.getAl_price() / alVO.getEvt_per();
+				}
 				sumPrice += thisAlprice * cv.getCa_count();
 				
 			}
@@ -164,12 +167,20 @@ public class MainController {
 	public void cart(CartVO vo, Model m){
 		
 		List<CartVO> list = mainService.cartCheck(vo.getUser_num());
+		 
 		
 		int totalPrice = 0;
 		
+		
 		for( CartVO cVO : list) {
-			cVO.setHap_price(cVO.getAl_price() * cVO.getCa_count());
-			totalPrice+=cVO.getHap_price();
+			if(cVO.getEvt_per()==0) {
+				cVO.setHap_price(cVO.getAl_price() * cVO.getCa_count());
+				totalPrice+=cVO.getHap_price();
+			}else {
+				cVO.setSale_price(cVO.getAl_price() - cVO.getAl_price()/cVO.getEvt_per());
+				cVO.setHap_price( cVO.getSale_price() * cVO.getCa_count());
+				totalPrice+=cVO.getHap_price();
+			}
 		}
 		
 		int textPrice = 3000;
@@ -268,5 +279,13 @@ public class MainController {
 		m.addAttribute("mainName", vo.getKi_name());
 
 	}
+	
+	@RequestMapping("/index.do")
+	public void index(AlcoholDetailVO vo, Model m) {
+		List<AlcoholDetailVO> list = mainService.selectAll(vo);
+		
+		m.addAttribute("alList", list);
+	}
+	
 	
 }

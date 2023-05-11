@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -181,134 +183,33 @@
     <section class="product spad">
         <div class="container">
             <div class="row">
+            	<!-- 반복 시작 -->
+            	<c:forEach items="${alList}" var="list" end="7">
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg">
-                            <div class="product__label">
-                                <span>탁주</span>
+                            <div class="product__item__pic set-bg" data-setbg=".././resources/upload/${list.img_name}">
+                                <div class="product__label">
+                                    <span>${list.ki_name}</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="shopDetails.do?al_num=${list.al_num}">${list.al_name}</a></h6>
+                                	<c:if test="${list.sale_price eq '0'}">
+		                            	<div class="product__item__price">${list.al_price}원</div>
+		                            </c:if>
+		                            <c:if test="${list.sale_price ne '0'}">
+			                            <div class="product__item__saleprice">${list.al_price}원</div>
+			                            <div class="product__item__price">${list.sale_price}원</div>
+		                            </c:if>
+		                            <div class="cart_add">
+		                            
+		                                <a href="shopDetails.do?al_num=${list.al_num}">상세 페이지로</a>
+		                            </div>
                             </div>
                         </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">탁주1</a></h6>
-                            <div class="product__item__price">$32.00</div>
-                            <div class="cart_add">
-                                <a href="#">상세 페이지로</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg">
-                            <div class="product__label">
-                                <span>증류주</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">증류주1</a></h6>
-                            <div class="product__item__price">$30.00</div>
-                            <div class="cart_add">
-                                <a href="#">상세 페이지로</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg">
-                            <div class="product__label">
-                                <span>약주/청주</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">약주/청주1</a></h6>
-                            <div class="product__item__price">$31.00</div>
-                            <div class="cart_add">
-                                <a href="#">상세 페이지로</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg">
-                            <div class="product__label">
-                                <span>칵테일</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">칵테일1</a></h6>
-                            <div class="product__item__price">$25.00</div>
-                            <div class="cart_add">
-                                <a href="#">상세 페이지로</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg">
-                            <div class="product__label">
-                                <span>탁주</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">탁주2</a></h6>
-                            <div class="product__item__price">$05.00</div>
-                            <div class="cart_add">
-                                <a href="#">상세 페이지로</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg">
-                            <div class="product__label">
-                                <span>증류주</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">증류주2</a></h6>
-                            <div class="product__item__price">$14.00</div>
-                            <div class="cart_add">
-                                <a href="#">상세 페이지로</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg">
-                            <div class="product__label">
-                                <span>약주/청주</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">약주/청주2</a></h6>
-                            <div class="product__item__price">$32.00</div>
-                            <div class="cart_add">
-                                <a href="#">상세 페이지로</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg">
-                            <div class="product__label">
-                                <span>칵테일</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">칵테일2</a></h6>
-                            <div class="product__item__price">$08.00</div>
-                            <div class="cart_add">
-                                <a href="#">상세 페이지로</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </c:forEach>
+                <!-- 반복 끝 -->
             </div>
         </div>
     </section>

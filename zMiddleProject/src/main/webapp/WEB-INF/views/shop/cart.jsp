@@ -88,7 +88,13 @@
 	                                            	${cart.al_name}
 	                                            </h6>
 	                                            <!-- h5부분 해당상품 가격 -->
-	                                            <h5>${cart.al_price}원</h5>
+	                                            <c:if test="${cart.sale_price eq '0'}">
+								                      <h5>${cart.al_price}원</h5>
+								                </c:if>
+								                <c:if test="${cart.sale_price ne '0'}">
+									            	<div class="product__item__saleprice">${cart.al_price}원</div>
+									            	<h5>${cart.sale_price}원</h5>
+								                </c:if>
 	                                        </div>
 	                                    </td>
 	                                    <td class="quantity__item">
