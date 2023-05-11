@@ -5,6 +5,11 @@
 
 
 <!-- #{VO의 멤버변수} -->
+
+<!-- 관리자 재품관리 및 문의관리 Mapper -->
+
+	<!-- 상품 등록 -->
+	<!-- 이미지 등록 여부인 al_opic 컬럼의default는 없음으로 처리를 위한 if문 -->
 	<insert id="insertProduct" parameterType="com.javassem.domain.ManageVO">
 		
 		insert into alcohols(
@@ -17,8 +22,11 @@
 			al_volume,
 			al_abv,
 			al_stock,
-			al_status,
-			al_opic)
+			al_status
+			<if test='al_opic==null'>
+			,al_opic
+			</if>
+			)
 			
 			values(
 			alcohols_seq.nextval,
@@ -30,8 +38,10 @@
 			#{al_volume},
 			#{al_abv},
 			#{al_stock},
-			#{al_status},
-			#{al_opic}		
+			#{al_status}
+			<if test='al_opic==null'>
+			,'없음'
+			</if>	
 		)
 	
 	</insert>	
@@ -41,6 +51,7 @@
 			SELECT * FROM alcohols ORDER BY KI_NUM ASC
 	</select>
 	
+	<!-- 주류번호별로 상품정보를 검색 -->
 	<select id="selectProductByPk"  parameterType="com.javassem.domain.ManageVO" resultType="com.javassem.domain.ManageVO">
 			SELECT * FROM alcohols WHERE al_num=#{al_num}
 	</select>
@@ -48,16 +59,20 @@
 	<!-- 상품 수정  -->
 	<update id="modifyProduct"  parameterType="com.javassem.domain.ManageVO">
 	 	UPDATE alcohols SET
-	 	al_name=#{al_name},
-	 	ki_num = #{ki_num},
-	 	al_abv=#{al_abv},
-	 	al_volume=#{al_volume},
-	 	al_price=#{al_price},
-	 	al_stock=#{al_stock},
-	 	al_status=#{al_status}
+	 	
+	 	al_name   =  #{al_name},
+	 	ki_num    =  #{ki_num},
+	 	al_abv    =  #{al_abv},
+	 	al_volume =  #{al_volume},
+	 	al_price  =  #{al_price},
+	 	al_stock  =  #{al_stock},
+	 	al_status =  #{al_status},
+	 	evt_num   =  #{evt_num}
+	 	
 	 	WHERE al_num=#{al_num}
 	</update>
 	
+	<!-- 상품 삭제 -->
 	<delete id="deleteProduct" parameterType="com.javassem.domain.ManageVO">
 		DELETE FROM alcohols
 		WHERE al_num=#{al_num}
@@ -68,13 +83,13 @@
 	<select id="selectBoardAll" resultType="com.javassem.domain.QnaListVO">
 	
 	SELECT 
-	p.pi_num pi_num,
-	u.user_name user_name,
+	p.pi_num 		 pi_num,
+	u.user_name 	 user_name,
 	c.board_catename board_catename,
-	c.board_catenum board_catenum,
-	p.pi_title pi_title,
-	p.pi_content pi_content,
-	p.pi_wdate pi_wdate
+	c.board_catenum  board_catenum,
+	p.pi_title 		 pi_title,
+	p.pi_content 	 pi_content,
+	p.pi_wdate 		 pi_wdate
 
 	FROM BOARD_POSTINFO p INNER JOIN BOARD_CATEGORYS c 
 	ON p.BOARD_CATENUM = c.BOARD_CATENUM 
@@ -84,6 +99,7 @@
 
 	INNER JOIN USERS u 
 	ON b.USER_NUM = u.USER_NUM
+	
 	</select>
 	
 	
@@ -91,16 +107,63 @@
 	<insert id="insertImage" parameterType="com.javassem.domain.RegisterDetailVO" >
 		
 		insert into AL_mainimg(
+		
 		al_num,
 		img_name,
 		img_realname,
 		img_size
-		)values(
+		)
+		
+		values(
 		#{al_num},
 		#{img_name},
 		#{img_realname},
 		#{img_size}
 		)
 	</insert>
+	
+	
+	<!-- 이미지 업로드시 이미지 여부를 "있음"으로 변경 -->
+	<update id="updateOpic" parameterType="com.javassem.domain.RegisterDetailVO">
+		update alcohols
+		set al_opic='있음'
+		where al_num=#{al_num}
+	</update>
+	
+	<!-- 이미지 삭제시 이미지 여부를 "없음"으로 변경 -->
+	<update id="deleteOpic" parameterType="com.javassem.domain.RegisterDetailVO">
+		update alcohols
+		set al_opic='없음'
+		where al_num=#{al_num}
+	</update>
+	
+	<!-- 이미지 삭제 -->
+	<delete id="deleteImage" parameterType="com.javassem.domain.RegisterDetailVO">
+		DELETE FROM AL_mainimg WHERE al_num=#{al_num}
+	</delete>
+	
+	<!-- 맛등록 -->
+	<insert id="insertFlavor" parameterType="com.javassem.domain.RegisterFlavorVO">
+			insert into AL_FLAVORS(
+			al_num,
+			fl_danmat,
+			fl_sinmat,
+			fl_tansan,
+			fl_body
+			)
+			
+			values(
+			#{al_num},
+			#{fl_danmat},
+			#{fl_sinmat},
+			#{fl_tansan},
+			#{fl_body}
+			)
+	</insert>
+	
+	<!-- 맛삭제 -->
+	<delete id="deleteFlavor" parameterType="com.javassem.domain.RegisterFlavorVO">
+		DELETE FROM AL_FLAVORS WHERE al_num=#{al_num}
+	</delete>
 
 </mapper>
