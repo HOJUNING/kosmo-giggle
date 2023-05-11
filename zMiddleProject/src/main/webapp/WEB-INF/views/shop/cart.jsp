@@ -79,7 +79,7 @@
 	                                <tr>
 	                                    <td class="product__cart__item">
 	                                        <div class="product__cart__item__pic">
-	                                            <img src=".././resources/img/shop/cart/cart-1.jpg" alt="">
+	                                            <img src=".././resources/upload/${cart.img_name}" alt="" width="100px" height="100px">
 	                                        </div>
 	                                        <div class="product__cart__item__text">
 	                                        	<!-- h6부분 상품명 -->

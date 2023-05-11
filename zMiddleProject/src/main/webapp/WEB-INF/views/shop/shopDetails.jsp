@@ -53,9 +53,9 @@
                 <div class="col-lg-6">
                     <div class="product__details__img">
                         <div class="product__details__big__img">
-                            <img class="big_img" src=".././resources/img/shop/details/product-big-1.jpg" alt="">
+                            <img class="big_img" src=".././resources/upload/${alDetail.img_name}" alt="">
                         </div>
-                        <div class="product__details__thumb">
+                        <!-- <div class="product__details__thumb">
                             <div class="pt__item active">
                                 <img data-imgbigurl=".././resources/img/shop/details/product-big-2.jpg"
                                 src=".././resources/img/shop/details/product-big-2.jpg" alt="">
@@ -76,7 +76,7 @@
                                 <img data-imgbigurl=".././resources/img/shop/details/product-big-5.jpg"
                                 src=".././resources/img/shop/details/product-big-5.jpg" alt="">
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-6">

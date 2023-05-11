@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ManageDAO">
+
+
+<!-- #{VO의 멤버변수} -->
+	<insert id="insertProduct" parameterType="com.javassem.domain.ManageVO">
+		
+		insert into alcohols(
+			al_num,
+			ki_num,
+			ma_num,
+			evt_num,
+			al_name,
+			al_price,
+			al_volume,
+			al_abv,
+			al_stock,
+			al_status,
+			al_opic)
+			
+			values(
+			alcohols_seq.nextval,
+			#{ki_num},
+			#{ma_num},
+			#{evt_num},
+			#{al_name},
+			#{al_price},
+			#{al_volume},
+			#{al_abv},
+			#{al_stock},
+			#{al_status},
+			#{al_opic}		
+		)
+	
+	</insert>	
+	
+	<!-- 등록된 상품 리스트  전체 검색 -->
+	<select id="selectProduct"  resultType="com.javassem.domain.ManageVO">
+			SELECT * FROM alcohols ORDER BY KI_NUM ASC
+	</select>
+	
+	<select id="selectProductByPk"  parameterType="com.javassem.domain.ManageVO" resultType="com.javassem.domain.ManageVO">
+			SELECT * FROM alcohols WHERE al_num=#{al_num}
+	</select>
+	
+	<!-- 상품 수정  -->
+	<update id="modifyProduct"  parameterType="com.javassem.domain.ManageVO">
+	 	UPDATE alcohols SET
+	 	al_name=#{al_name},
+	 	ki_num = #{ki_num},
+	 	al_abv=#{al_abv},
+	 	al_volume=#{al_volume},
+	 	al_price=#{al_price},
+	 	al_stock=#{al_stock},
+	 	al_status=#{al_status}
+	 	WHERE al_num=#{al_num}
+	</update>
+	
+	<delete id="deleteProduct" parameterType="com.javassem.domain.ManageVO">
+		DELETE FROM alcohols
+		WHERE al_num=#{al_num}
+	</delete>
+	
+	
+	<!-- 게시글 전체 검색 -->
+	<select id="selectBoardAll" resultType="com.javassem.domain.QnaListVO">
+	
+	SELECT 
+	p.pi_num pi_num,
+	u.user_name user_name,
+	c.board_catename board_catename,
+	c.board_catenum board_catenum,
+	p.pi_title pi_title,
+	p.pi_content pi_content,
+	p.pi_wdate pi_wdate
+
+	FROM BOARD_POSTINFO p INNER JOIN BOARD_CATEGORYS c 
+	ON p.BOARD_CATENUM = c.BOARD_CATENUM 
+
+	INNER JOIN BOARDS b 
+	ON p.PI_NUM = b.PI_NUM 
+
+	INNER JOIN USERS u 
+	ON b.USER_NUM = u.USER_NUM
+	</select>
+	
+	
+	<!-- 이미지업로드 -->
+	<insert id="insertImage" parameterType="com.javassem.domain.RegisterDetailVO" >
+		
+		insert into AL_mainimg(
+		al_num,
+		img_name,
+		img_realname,
+		img_size
+		)values(
+		#{al_num},
+		#{img_name},
+		#{img_realname},
+		#{img_size}
+		)
+	</insert>
+
+</mapper>

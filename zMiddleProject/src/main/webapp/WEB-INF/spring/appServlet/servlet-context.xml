@@ -24,6 +24,10 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="com.javaclass.project" />
+	<context:component-scan base-package="com.javassem" />
 	
+	<!-- 파일 업로드 하기위한 multiResolver -->
+    <beans:bean id="multipartResolver"  
+         class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
 	
 </beans:beans>

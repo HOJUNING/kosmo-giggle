@@ -49,6 +49,9 @@
                                 		
                                 		<c:if test="${sessionScope.user_name ne null}">
 	                                		<li><a href="#">${sessionScope.user_name}님</a></li>
+											<c:if test="${sessionScope.user_role eq 'ROLE_ADMIN'}">
+												<li><a href="gotoManage.do">관리자페이지로</a></li>
+											</c:if>
 	                                		<li><a href="logout.do">로그아웃</a></li>
                                 		</c:if>
                                 	</ul>

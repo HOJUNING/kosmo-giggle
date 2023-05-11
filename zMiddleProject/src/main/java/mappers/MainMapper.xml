@@ -18,6 +18,8 @@
 		SELECT * 
 		FROM CART ca INNER JOIN ALCOHOLS al
 						ON ca.al_num=al.al_num
+					  INNER JOIN AL_MAINIMG img
+                    	on ca.al_num=img.al_num
 		WHERE USER_NUM=#{user_num}
 
 	</select>
@@ -40,7 +42,7 @@
 		SELECT *
 		FROM USERS
 		<where>
-			<if test="user_id!=null and user_num==null">
+			<if test="user_id!=null">
 			USER_ID=#{user_id}
 			</if>
 			<if test="user_id==null and user_num!=null">
@@ -64,17 +66,13 @@
 		parameterType="com.javaclass.project.domain.AlcoholsVO"
 		resultType="com.javaclass.project.domain.AlcoholsVO">
 	
-		SELECT al.ki_num 	ki_num
-			 , al.al_name 	al_name
-			 , al.al_price  al_price
-			 , al.al_num 	al_num
-			 , al.al_status al_status
-			 , ki.ki_name 	ki_name
-			 , evt.evt_per  evt_per
+		SELECT *
 		FROM ALCOHOLS al INNER JOIN AL_KINDS ki
 			on al.ki_num=ki.ki_num
 						 INNER JOIN AL_EVENTS evt
 			on al.evt_num=evt.evt_num
+						 INNER JOIN AL_MAINIMG img
+			on al.al_num=img.al_num
 		WHERE al.KI_NUM=#{ki_num}
 		
 	</select>
@@ -88,10 +86,12 @@
 					on al.ki_num=ki.ki_num
 		                 INNER JOIN AL_EVENTS evt
 					on al.evt_num=evt.evt_num
-		                 INNER JOIN AL_FLAVORS fl
+		                 LEFT OUTER JOIN AL_FLAVORS fl
 		            on al.al_num=fl.al_num
 		            	 INNER JOIN AL_MAKERS ma
 		            on al.ma_num=ma.ma_num
+		            	INNER JOIN AL_MAINIMG img
+                    on al.al_num=img.al_num
 		WHERE al.al_num = #{al_num}
 		
 	</select>

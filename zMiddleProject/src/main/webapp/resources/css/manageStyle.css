@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.manage_title{
+	
+	
+}
+
+.manage_section{
+	
+	display:flex;
+}
+
+.manage_item{
+	
+}
+
+.manage_item img{
+	
+	width:200px;
+	height:200px;
+}

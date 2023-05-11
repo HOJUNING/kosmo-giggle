@@ -18,18 +18,18 @@
     rel="stylesheet">
 
 	<!-- 빠삐콘 -->
-	<link rel="shortcut icon" href=".././resources/img/favicon.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="${pageContext.request.contextPath}//resources/img/favicon.png" type="image/x-icon" />
     <!-- Css Styles -->
-    <link rel="stylesheet" href=".././resources/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href=".././resources/css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href=".././resources/css/barfiller.css" type="text/css">
-    <link rel="stylesheet" href=".././resources/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href=".././resources/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href=".././resources/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href=".././resources/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href=".././resources/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href=".././resources/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href=".././resources/css/style.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -44,7 +44,7 @@
     <!-- Hero Section Begin -->
     <section class="hero">
         <div class="hero__slider owl-carousel">
-            <div class="hero__item set-bg" data-setbg=".././resources/img/main/mainback1.jpg">
+            <div class="hero__item set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/main/mainback1.jpg">
                 <div class="container">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
@@ -55,7 +55,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hero__item set-bg" data-setbg=".././resources/img/main/mainback2.jpg">
+            <div class="hero__item set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/main/mainback2.jpg">
                 <div class="container">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
@@ -183,7 +183,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg">
                             <div class="product__label">
                                 <span>탁주</span>
                             </div>
@@ -199,7 +199,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg">
                             <div class="product__label">
                                 <span>증류주</span>
                             </div>
@@ -215,7 +215,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg">
                             <div class="product__label">
                                 <span>약주/청주</span>
                             </div>
@@ -231,7 +231,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg">
                             <div class="product__label">
                                 <span>칵테일</span>
                             </div>
@@ -247,7 +247,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg">
                             <div class="product__label">
                                 <span>탁주</span>
                             </div>
@@ -263,7 +263,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg">
                             <div class="product__label">
                                 <span>증류주</span>
                             </div>
@@ -279,7 +279,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg">
                             <div class="product__label">
                                 <span>약주/청주</span>
                             </div>
@@ -295,7 +295,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/gaonasi.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg">
                             <div class="product__label">
                                 <span>칵테일</span>
                             </div>
@@ -314,7 +314,7 @@
     </section>
     <!-- Product Section End -->
 
-    <!-- Class Section Begin -->
+    <%-- <!-- Class Section Begin -->
     <section class="class spad">
         <div class="container">
             <div class="row">
@@ -338,7 +338,7 @@
                     </div>
                 </div>
             </div>
-            <div class="class__video set-bg" data-setbg=".././resources/img/class-video.jpg">
+            <div class="class__video set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/class-video.jpg">
                 <a href="https://www.youtube.com/watch?v=8PJ3_p7VqHw&list=RD8PJ3_p7VqHw&start_radio=1"
                 class="play-btn video-popup"><i class="fa fa-play"></i></a>
             </div>
@@ -364,7 +364,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="team__item set-bg" data-setbg=".././resources/img/team/team-1.jpg">
+                    <div class="team__item set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/team/team-1.jpg">
                         <div class="team__item__text">
                             <h6>Randy Butler</h6>
                             <span>Decorater</span>
@@ -378,7 +378,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="team__item set-bg" data-setbg=".././resources/img/team/team-2.jpg">
+                    <div class="team__item set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/team/team-2.jpg">
                         <div class="team__item__text">
                             <h6>Randy Butler</h6>
                             <span>Decorater</span>
@@ -392,7 +392,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="team__item set-bg" data-setbg=".././resources/img/team/team-3.jpg">
+                    <div class="team__item set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/team/team-3.jpg">
                         <div class="team__item__text">
                             <h6>Randy Butler</h6>
                             <span>Decorater</span>
@@ -406,7 +406,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="team__item set-bg" data-setbg=".././resources/img/team/team-4.jpg">
+                    <div class="team__item set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/team/team-4.jpg">
                         <div class="team__item__text">
                             <h6>Randy Butler</h6>
                             <span>Decorater</span>
@@ -422,7 +422,7 @@
             </div>
         </div>
     </section>
-    <!-- Team Section End -->
+    <!-- Team Section End --> --%>
 
     <!-- Testimonial Section Begin -->
     <section class="testimonial spad">
@@ -441,7 +441,7 @@
                         <div class="testimonial__item">
                             <div class="testimonial__author">
                                 <div class="testimonial__author__pic">
-                                    <img src=".././resources/img/testimonial/ta-1.jpg" alt="">
+                                    <img src="${pageContext.request.contextPath}/resources/img/testimonial/ta-1.jpg" alt="">
                                 </div>
                                 <div class="testimonial__author__text">
                                     <h5>이병훈</h5>
@@ -462,7 +462,7 @@
                         <div class="testimonial__item">
                             <div class="testimonial__author">
                                 <div class="testimonial__author__pic">
-                                    <img src=".././resources/img/testimonial/ta-2.jpg" alt="">
+                                    <img src="${pageContext.request.contextPath}/resources/img/testimonial/ta-2.jpg" alt="">
                                 </div>
                                 <div class="testimonial__author__text">
                                     <h5>이병훈</h5>
@@ -483,7 +483,7 @@
                         <div class="testimonial__item">
                             <div class="testimonial__author">
                                 <div class="testimonial__author__pic">
-                                    <img src=".././resources/img/testimonial/ta-1.jpg" alt="">
+                                    <img src="${pageContext.request.contextPath}/resources/img/testimonial/ta-1.jpg" alt="">
                                 </div>
                                 <div class="testimonial__author__text">
                                     <h5>이병훈</h5>
@@ -504,7 +504,7 @@
                         <div class="testimonial__item">
                             <div class="testimonial__author">
                                 <div class="testimonial__author__pic">
-                                    <img src=".././resources/img/testimonial/ta-2.jpg" alt="">
+                                    <img src="${pageContext.request.contextPath}/resources/img/testimonial/ta-2.jpg" alt="">
                                 </div>
                                 <div class="testimonial__author__text">
                                     <h5>이병훈</h5>
@@ -525,7 +525,7 @@
                         <div class="testimonial__item">
                             <div class="testimonial__author">
                                 <div class="testimonial__author__pic">
-                                    <img src=".././resources/img/testimonial/ta-1.jpg" alt="">
+                                    <img src="${pageContext.request.contextPath}/resources/img/testimonial/ta-1.jpg" alt="">
                                 </div>
                                 <div class="testimonial__author__text">
                                     <h5>이병훈</h5>
@@ -546,7 +546,7 @@
                         <div class="testimonial__item">
                             <div class="testimonial__author">
                                 <div class="testimonial__author__pic">
-                                    <img src=".././resources/img/testimonial/ta-2.jpg" alt="">
+                                    <img src="${pageContext.request.contextPath}/resources/img/testimonial/ta-2.jpg" alt="">
                                 </div>
                                 <div class="testimonial__author__text">
                                     <h5>이병훈</h5>
@@ -586,32 +586,32 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic">
-                                <img src=".././resources/img/shop/gaonasi.jpg" alt="">
+                                <img src="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic middle__pic">
-                                <img src=".././resources/img/shop/gaonasi.jpg" alt="">
+                                <img src="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic">
-                                <img src=".././resources/img/shop/gaonasi.jpg" alt="">
+                                <img src="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic">
-                                <img src=".././resources/img/shop/gaonasi.jpg" alt="">
+                                <img src="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic middle__pic">
-                                <img src=".././resources/img/shop/gaonasi.jpg" alt="">
+                                <img src="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="instagram__pic">
-                                <img src=".././resources/img/shop/gaonasi.jpg" alt="">
+                                <img src="${pageContext.request.contextPath}/resources/img/shop/gaonasi.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -646,15 +646,21 @@
     <jsp:include page="./footer.jsp" />
 	
 <!-- Js Plugins -->
-<script src=".././resources/js/jquery-3.3.1.min.js"></script>
-<script src=".././resources/js/bootstrap.min.js"></script>
-<script src=".././resources/js/jquery.nice-select.min.js"></script>
-<script src=".././resources/js/jquery.barfiller.js"></script>
-<script src=".././resources/js/jquery.magnific-popup.min.js"></script>
-<script src=".././resources/js/jquery.slicknav.js"></script>
-<script src=".././resources/js/owl.carousel.min.js"></script>
-<script src=".././resources/js/jquery.nicescroll.min.js"></script>
-<script src=".././resources/js/main.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery-3.3.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery.nice-select.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery.barfiller.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery.magnific-popup.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery.slicknav.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery.nicescroll.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+<!-- <script type="text/javascript">
+$(".team__btn").click(function(){
+	alert("하이")
+	window.location="http://localhost:8080/basic/manage/manageMain.do"
+})
+</script> -->
 </body>
 
 </html>

@@ -130,7 +130,7 @@
 	               	<c:if test="${alc.al_status == '판매중'}">
 		                <div class="col-lg-3 col-md-6 col-sm-6">
 		                    <div class="product__item">
-		                        <div class="product__item__pic set-bg" data-setbg=".././resources/img/shop/product-1.jpg">
+		                        <div class="product__item__pic set-bg" data-setbg=".././resources/upload/${alc.img_name}">
 		                            <div class="product__label">
 		                                <span>${alc.ki_name}</span>
 		                            </div>

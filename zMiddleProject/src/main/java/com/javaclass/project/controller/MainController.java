@@ -30,6 +30,13 @@ public class MainController {
 		return "shop/"+step;
 	}
 	
+	
+//	@RequestMapping("/manageMain.do")
+//	public String manageMain() {
+//		return "../../manageMain";
+//	}
+//	
+
 	@RequestMapping("/logout.do")
 	public String logout(HttpSession sess) {
 		sess.removeAttribute("user_name");
@@ -42,8 +49,15 @@ public class MainController {
 		
 		if(checkVO==null) {
 			return "redirect:login.do";
+		}else {
+			sess.setAttribute("user_name", checkVO.getUser_name());
+			sess.setAttribute("user_num", checkVO.getUser_num());
+			sess.setAttribute("user_role", checkVO.getUser_role());
 		}
 		
+		if(checkVO.getUser_role().equals("ROLE_ADMIN")) {
+			return "redirect:gotoManage.do";
+		}
 		
 		return "redirect:cartCheckIndex.do?user_num="+checkVO.getUser_num();
 		
@@ -132,11 +146,6 @@ public class MainController {
 			
 			sess.setAttribute("priceCA", sumPrice);
 		}
-		
-		
-		sess.setAttribute("user_name", result.getUser_name());
-		sess.setAttribute("user_num", result.getUser_num());
-		
 		
 		return "redirect:index.do";
 	}

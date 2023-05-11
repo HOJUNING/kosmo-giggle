@@ -13,10 +13,32 @@ public class AlcoholsVO {
 	   private Integer al_stock; // 재고
 	   private String  al_status; // 재고상태
 	   private String  al_opic; // 주류사진
-	   private String ki_name;
-	   private int evt_per;
+	   private String ki_name; // 종류 이름
+	   private int evt_per; // 할인률
+	   private String img_name; // 메인 이미지 이름
+	   private String img_realname; // 메인 이미지 리얼이름
+	   private int img_size; // 이미지 크기
 	   
-	   public int getEvt_per() {
+	   
+	   public String getImg_name() {
+		return img_name;
+	}
+	public void setImg_name(String img_name) {
+		this.img_name = img_name;
+	}
+	public String getImg_realname() {
+		return img_realname;
+	}
+	public void setImg_realname(String img_realname) {
+		this.img_realname = img_realname;
+	}
+	public int getImg_size() {
+		return img_size;
+	}
+	public void setImg_size(int img_size) {
+		this.img_size = img_size;
+	}
+	public int getEvt_per() {
 		return evt_per;
 	}
 	public void setEvt_per(int evt_per) {
