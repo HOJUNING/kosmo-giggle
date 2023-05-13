@@ -12,7 +12,7 @@
 	var uid = '<%=(String)session.getAttribute("user_role")%>';
 	
 	if(uid=="ROLE_ADMIN") {
-		window.location="http://192.168.0.69:8080/basic/manage/manageMain.do";
+		window.location="http://localhost:8080/basic/manage/manageMain.do";
 	}else{
 		window.location="http://192.168.0.69:8080/basic/shop/index.do";
 	}

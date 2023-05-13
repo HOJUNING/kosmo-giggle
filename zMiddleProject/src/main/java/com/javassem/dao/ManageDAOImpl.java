@@ -18,29 +18,29 @@ public class ManageDAOImpl implements ManageDAO {
 
 	@Override
 	public void insertProduct(ManageVO vo) {
-		System.out.println("Mybatis insertProduct 호출");
+	//	System.out.println("Mybatis insertProduct 호출");
 		mybatis.insert("ManageDAO.insertProduct" ,vo);
 	}
 
 	@Override
 	public List<ManageVO> selectProduct(ManageVO vo) {
-		System.out.println("Mybatis selectProduct 호출");
+	//	System.out.println("Mybatis selectProduct 호출");
 		
 		List<ManageVO> list = mybatis.selectList("ManageDAO.selectProduct");
 		
-		System.out.println(list);
+	//	System.out.println(list);
 		return list;
 	}
 
 	@Override
 	public void modifyProduct(ManageVO vo) {
-		System.out.println("Mybatis modifyProduct 호출");
+	//	System.out.println("Mybatis modifyProduct 호출");
 		mybatis.update("ManageDAO.modifyProduct", vo);
 	}
 
 	@Override
 	public void deleteProduct(ManageVO vo) {
-		System.out.println("Mybatis deleteProduct 호출");
+	//	System.out.println("Mybatis deleteProduct 호출");
 		int result = mybatis.delete("ManageDAO.deleteProduct", vo);
 			
 	}
@@ -52,8 +52,8 @@ public class ManageDAOImpl implements ManageDAO {
 
 	@Override
 	public void insertImage(RegisterDetailVO ivo) {
-		System.out.println("Mybatis insertImage 호풀");
-		System.out.println(ivo);
+	//	System.out.println("Mybatis insertImage 호풀");
+	//	System.out.println(ivo);
 	  mybatis.insert("ManageDAO.insertImage",ivo);
 	  mybatis.update("ManageDAO.updateOpic",ivo);
 		
@@ -61,13 +61,13 @@ public class ManageDAOImpl implements ManageDAO {
 
 	@Override
 	public void insertFlavor(RegisterFlavorVO fvo) {
-		System.out.println("Mybatis insertFlavor 호출");
+	//	System.out.println("Mybatis insertFlavor 호출");
 		mybatis.insert("ManageDAO.insertFlavor", fvo);
 	}
 
 	@Override
 	public void deleteImage(RegisterDetailVO ivo) {
-		System.out.println("Mybatis deleteImage 호출");
+	//	System.out.println("Mybatis deleteImage 호출");
 		int result = mybatis.delete("ManageDAO.deleteImage", ivo);
 		if(result==1) {
 			mybatis.update("ManageDAO.deleteOpic",ivo);
@@ -76,10 +76,9 @@ public class ManageDAOImpl implements ManageDAO {
 
 	@Override
 	public void deleteFlavor(RegisterFlavorVO fvo) {
-		System.out.println("Mybatis deleteFlavor 호출");
+	//	System.out.println("Mybatis deleteFlavor 호출");
 		int result = mybatis.delete("ManageDAO.deleteFlavor", fvo);
-		
-		
+
 	}
 
 }

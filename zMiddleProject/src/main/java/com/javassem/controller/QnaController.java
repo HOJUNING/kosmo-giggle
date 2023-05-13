@@ -23,8 +23,8 @@ public class QnaController {
 	public void qnaList(QnaListVO vo, Model m){
 		List<QnaListVO> list = serviceQnAImpl.qnaList(vo);
 		m.addAttribute("qnaList",list);
-		System.out.println("컨트롤 받아온 리스트 값 출력================>");
-		System.out.println(list.toString());
+		//System.out.println("컨트롤 받아온 리스트 값 출력================>");
+		//System.out.println(list.toString());
 	}
 
 }

@@ -8,9 +8,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.javassem.domain.MChartVO;
 import com.javassem.domain.ManageVO;
 import com.javassem.domain.RegisterDetailVO;
 import com.javassem.domain.RegisterFlavorVO;
+import com.javassem.service.ServiceMChartImpl;
 import com.javassem.service.ServiceManageImpl;
 
 @Controller
@@ -20,9 +22,19 @@ public class ManageController {
 		@Autowired
      	private ServiceManageImpl serviceManage;
 		
+		@Autowired
+		private ServiceMChartImpl serviceMChartImpl;
+		
 		//메인 페이지 확인
 		 @RequestMapping("/manageMain.do") 
-		 public void main() {}
+		 public void main(Model m) {
+			 List<MChartVO> list = serviceMChartImpl.chartList();
+				int su = 1;
+				for(MChartVO vo : list) {
+					m.addAttribute("mon"+su,vo.getOr_totalprice());
+					su++;
+				}
+		 }
 	
 		//상품등록페이지로 이동
 		@RequestMapping("/register.do") 
@@ -58,11 +70,11 @@ public class ManageController {
 		}
 		 
 		
-		  // 상품 삭제 페이지 이동
-		  @RequestMapping("deletePage.do") //productList.jsp에 있는 삭제버튼 누르면 삭제 페이지로 이동
-		  public void deletePage(ManageVO vo,Model m) {
-			  m.addAttribute("al_num", vo.getAl_num());
-		  }
+		 // 상품 삭제 페이지 이동
+		 @RequestMapping("deletePage.do") //productList.jsp에 있는 삭제버튼 누르면 삭제 페이지로 이동
+		 public void deletePage(ManageVO vo,Model m) {
+			 m.addAttribute("al_num", vo.getAl_num());
+		 }
 		 
 		// 상품 삭제 
 		@RequestMapping("/delete.do") //deletePage.jsp에 있는 상품삭제 버튼 누르면 상품 삭제 진행

@@ -319,7 +319,7 @@
                     <h1 class="h3 mb-2 text-gray-800">등록된상품리스트</h1>
                     <p class="mb-4">상품리스트</p>
 
-                    <!-- DataTales Example -->
+                    <!-- 등록된 상품 리스트 전체검색 -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">상품리스트</h6>
@@ -374,7 +374,7 @@
                     </div>
 
                 </div>
-                <!-- /.container-fluid -->
+                 <!-- 등록된 상품 리스트 전체검색 끝 -->
 
             </div>
             <!-- End of Main Content -->

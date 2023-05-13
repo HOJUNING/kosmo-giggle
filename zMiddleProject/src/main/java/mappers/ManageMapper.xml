@@ -72,9 +72,9 @@
 	 	WHERE al_num=#{al_num}
 	</update>
 	
-	<!-- 상품 삭제 -->
+	<!-- 상품 비활성 -->
 	<delete id="deleteProduct" parameterType="com.javassem.domain.ManageVO">
-		DELETE FROM alcohols
+		UPDATE alcohols SET al_status='준비중'
 		WHERE al_num=#{al_num}
 	</delete>
 	

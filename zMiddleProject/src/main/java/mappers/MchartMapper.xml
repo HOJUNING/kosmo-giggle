@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MChartDAO">
+
+<select id="selectChart" resultType="com.javassem.domain.MChartVO">
+		
+select to_char(or_paydate,'MM') or_paydate , sum(or_totalprice) or_totalprice
+from orders
+where to_char(or_paydate,'yyyy')=2023
+group by to_char(or_paydate,'MM')
+order by or_paydate
+
+</select>
+
+</mapper>

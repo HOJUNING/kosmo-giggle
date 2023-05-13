@@ -11,6 +11,7 @@
    <link href=".././resources/css/sb-admin-2.min.css" rel="stylesheet">
 </head>
 <body>
+	<!-- 이미지 등록 시작 -->
     <div class="container">
         <div class="image-upload" id="image-upload">
             <form method="post" enctype="multipart/form-data" action="insertImage.do">
@@ -33,8 +34,10 @@
         </div>
     </div>
     
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- 이미지 등록 끝 -->
     
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- 상품리스트 페이지로 버튼 클릭시 이벤트 -->
     <script type="text/javascript">
     $(function(){
     	$('#backlist').click(function(){
