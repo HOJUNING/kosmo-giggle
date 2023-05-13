@@ -14,12 +14,11 @@ public class QnADAOImpl implements QnADAO {
 	@Autowired
 	private SqlSessionTemplate mybatis;
 
-	@Override
+	@Override //문의내역(게시글) 전체 검색
 	public List<QnaListVO> qnaList(QnaListVO vo) {
-		
-		System.out.println("ManageDAO.selectBoardAll 호출");
+		//System.out.println("ManageDAO.selectBoardAll 호출");
 		List<QnaListVO> list = mybatis.selectList("ManageDAO.selectBoardAll");
-		System.out.println(list);
+		//System.out.println(list);
 		return list;
 	}
 

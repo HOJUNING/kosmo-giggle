@@ -35,7 +35,7 @@ public class ServiceManageImpl implements ManageDAO {
 		manageDAO.modifyProduct(vo);	
 	}
 
-	// 상품 삭제
+	// 상품 비활성
 	@Override
 	public void deleteProduct(ManageVO vo) {
 		manageDAO.deleteProduct(vo);	

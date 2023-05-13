@@ -14,7 +14,7 @@ public class ServiceQnAImpl implements ServiceQnA {
 	@Autowired
 	private QnADAOImpl qnaDAOImpl;
 	
-	@Override
+	@Override//문의관리(게시글)전체검색
 	public List<QnaListVO> qnaList(QnaListVO vo) {
 		
 		return qnaDAOImpl.qnaList(vo);

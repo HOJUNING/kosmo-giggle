@@ -5,5 +5,5 @@ import java.util.List;
 import com.javassem.domain.MChartVO;
 
 public interface MChartDAO {
-	public List<MChartVO> chartList();
+	public List<MChartVO> chartList(); // 차트리스트 검색
 }

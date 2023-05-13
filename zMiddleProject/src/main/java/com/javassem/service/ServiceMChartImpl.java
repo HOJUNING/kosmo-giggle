@@ -14,9 +14,8 @@ public class ServiceMChartImpl implements ServiceMChart {
 	@Autowired
 	private MChartDAOImpl mchartDAOImpl;
 	
-	@Override
+	@Override // 차트전체검색
 	public List<MChartVO> chartList() {
-		
 		return mchartDAOImpl.chartList();
 	}
 

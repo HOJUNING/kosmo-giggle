@@ -18,14 +18,17 @@ import com.javassem.service.ServiceManageImpl;
 @Controller
 @RequestMapping("/manage")
 public class ManageController {
-	
+		
+	    //재고관리 service
 		@Autowired
      	private ServiceManageImpl serviceManage;
 		
+		//차트service
 		@Autowired
 		private ServiceMChartImpl serviceMChartImpl;
 		
-		//메인 페이지 확인
+		//관리자 메인 페이지 확인
+		//관리자 페이지에서 출력되는 차트 컨트롤러
 		 @RequestMapping("/manageMain.do") 
 		 public void main(Model m) {
 			 List<MChartVO> list = serviceMChartImpl.chartList();
@@ -41,21 +44,23 @@ public class ManageController {
 		public void register() {}
 		
 		//상품 등록
-		@RequestMapping("/insertAC.do") // regist.jsp에 있는 상품등록 누르면 동작
+		//상품등록 페이지에 있는 상품등록 누르면 동작
+		@RequestMapping("/insertAC.do")
 		public String insertAC(ManageVO vo) {
 			serviceManage.insertProduct(vo);
 			return "redirect:register.do";
 		}
 		
 		 //등록한 상품(전체) 검색
-		
-		@RequestMapping("/productList.do") // 등록된 상품의 전체가 검색되어 리스트로 검색
+		//등록된 상품의 전체가 검색되어 리스트로 검색
+		@RequestMapping("/productList.do")
 		public void select(ManageVO vo, Model m) {			
 			List<ManageVO> list = serviceManage.selectProduct(vo);
 			m.addAttribute("alList", list);
 		}
 		
 		//상품 수정 페이지 이동
+		// 해당 상품에 수정버튼 누를시 수정페이지로 이동
 		@RequestMapping("/productModify.do")
 		public void productModifyForm(ManageVO vo, Model m) {
 			ManageVO voList = serviceManage.selectProductByPk(vo);
@@ -63,7 +68,8 @@ public class ManageController {
 		}
 		
 		// 상품 수정
-		@RequestMapping("/modify.do") //productModify.jsp에 있는 수정버튼 누르면 동작
+		//상품 수정페이지에 있는 수정버튼 누르면 동작
+		@RequestMapping("/modify.do")
 		public String modify(ManageVO vo) {
 			serviceManage.modifyProduct(vo);
 			return "redirect:productList.do";
@@ -71,53 +77,61 @@ public class ManageController {
 		 
 		
 		 // 상품 삭제 페이지 이동
-		 @RequestMapping("deletePage.do") //productList.jsp에 있는 삭제버튼 누르면 삭제 페이지로 이동
+		//전체상품리스트에 있는 삭제버튼 누르면 삭제 페이지로 이동
+		 @RequestMapping("deletePage.do")
 		 public void deletePage(ManageVO vo,Model m) {
 			 m.addAttribute("al_num", vo.getAl_num());
 		 }
 		 
 		// 상품 삭제 
-		@RequestMapping("/delete.do") //deletePage.jsp에 있는 상품삭제 버튼 누르면 상품 삭제 진행
+		//삭제페이지에 있는 상품비활성 버튼 누르면 재고상태가 '준비중'으로 변경
+		@RequestMapping("/delete.do")
 		public String delete(ManageVO vo) {
 			serviceManage.deleteProduct(vo);
 			return "redirect:productList.do?al_num="+vo.getAl_num();
 		}
 		
 		//상품 이미지 삭제
-		@RequestMapping("/deleteImage.do") // deletePage.jsp에 있는 이미지 삭제 버튼 누르면 등록된 이미지 삭제
+		// 삭제페이지에 있는 이미지 삭제 버튼 누르면 등록된 이미지 삭제
+		@RequestMapping("/deleteImage.do") 
 		public String deleteImage(RegisterDetailVO ivo) {
 			serviceManage.deleteImage(ivo);
 			return "redirect:deletePage.do?al_num="+ivo.getAl_num();
 		}
 		
 		//상품 맛 삭제
-		@RequestMapping("/deleteFlavor.do") // deletePage.jsp에 있는 맛삭제 버튼 누르면 등록된 상품별 맛 레코드들이 삭제
+		//삭제페이지에 있는 맛삭제 버튼 누르면 등록된 상품별 맛 레코드들이 삭제
+		@RequestMapping("/deleteFlavor.do") 
 		public String deleteFlavor(RegisterFlavorVO fvo) {
 			serviceManage.deleteFlavor(fvo);
 			return "redirect:deletePage.do?al_num="+fvo.getAl_num();
 		}
 		
 		//상품 이미지 등록 페이지 이동
-		@RequestMapping("/registerDetail.do") // productModify.jsp에 있는 상품별 이미지 등록 페이지로 이동
+		//전체상품리스트에 있는 상품별 이미지 등록 페이지로 이동
+		@RequestMapping("/registerDetail.do") 
 		public void alDetailForm(RegisterDetailVO ivo, Model m) {
 			m.addAttribute("al_num",ivo.getAl_num());
 		}
 		
 		//상품 이미지 등록
-		@RequestMapping("/insertImage.do") //registerDetail.jsp에 있는 이미지 버튼 누르면 이미지 등록됨
+		//이미지 등록페이지에 있는 이미지 버튼 누르면 이미지 등록됨
+		@RequestMapping("/insertImage.do") 
 		public String insertImage(RegisterDetailVO ivo, Model m) throws IOException {
 			serviceManage.insertImage(ivo);
 			return "redirect:registerDetail.do";
 		}
 		
 		//상품 맛 페이지 이동
-		@RequestMapping("/registerFlavor.do") // productModify.jsp에 있는 상품별 맛 등록 페이지로 이동
+		//전체상품리스트에에 있는 상품별 맛등록 버튼을 통해 맛 등록 페이지로 이동
+		@RequestMapping("/registerFlavor.do") 
 		public void flavorForm(RegisterFlavorVO fvo, Model m){
 			m.addAttribute("al_num",fvo.getAl_num());
 		}
 		
 		//상품 맛 등록
-		@RequestMapping("/insertFlavor.do") //registerFlavor.jsp에 있는 맛등록 버튼 누르면 맛 등록됨
+		//맛등록페이지에 있는 맛등록 버튼 누르면 맛 등록됨
+		@RequestMapping("/insertFlavor.do") 
 		public String insertFlavor(RegisterFlavorVO fvo) {
 			serviceManage.insertFlavor(fvo);
 			return "redirect:productList.do";

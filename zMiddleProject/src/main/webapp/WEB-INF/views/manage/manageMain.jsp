@@ -74,13 +74,6 @@
                     <span>문의관리</span></a>
             </li>
             
-               <!--Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.do">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>매출관리</span></a>
-            </li>
-            
             <!--Nav Item - shop -->
             <li class="nav-item">
                 <a class="nav-link" href="http://localhost:8080/basic/shop/index.do">
@@ -476,9 +469,12 @@
     <script src=".././resources/js/demo/chart-pie-demo.js"></script>
     <script src=".././resources/js/demo/chart-bar-demo.js"></script>
     
+    
+    <!-- 메인페이지에서 매출 차트 AreaChart/Bar Chart -->
     <script type="text/javascript">
+    
+    // AreaChart
     var ctx = document.getElementById("myAreaChart");
- 
     var mon1 = ${mon1};
     var mon2 = ${mon2};
     var mon3 = ${mon3};
@@ -580,7 +576,7 @@
       }
     });
     
- // Bar Chart Example
+ // Bar Chart 
     var ctx = document.getElementById("myBarChart");
     var myBarChart = new Chart(ctx, {
       type: 'bar',

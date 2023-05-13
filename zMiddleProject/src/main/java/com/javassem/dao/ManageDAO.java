@@ -7,15 +7,15 @@ import com.javassem.domain.RegisterDetailVO;
 import com.javassem.domain.RegisterFlavorVO;
 
 public interface ManageDAO {
-	public void insertProduct(ManageVO vo);
-	public List<ManageVO> selectProduct(ManageVO vo);
-	public ManageVO selectProductByPk(ManageVO vo);
-	public void modifyProduct(ManageVO vo);
-	public void deleteProduct(ManageVO vo);
+	public void insertProduct(ManageVO vo); 			// 상품등록
+	public List<ManageVO> selectProduct(ManageVO vo);	// 전체상품검색
+	public ManageVO selectProductByPk(ManageVO vo);		// 상품별검색
+	public void modifyProduct(ManageVO vo);				// 상품수정
+	public void deleteProduct(ManageVO vo);				// 재고상태비활성
 	
-	public void insertImage(RegisterDetailVO ivo);
-	public void deleteImage(RegisterDetailVO ivo);
+	public void insertImage(RegisterDetailVO ivo);		// 상품이미지 등록
+	public void deleteImage(RegisterDetailVO ivo);		// 상품이미지 삭제
 	
-	public void insertFlavor(RegisterFlavorVO fvo);
-	public void deleteFlavor(RegisterFlavorVO fvo);
+	public void insertFlavor(RegisterFlavorVO fvo);		// 맛(당도) 등록
+	public void deleteFlavor(RegisterFlavorVO fvo);		// 맛(당도) 삭제
 }

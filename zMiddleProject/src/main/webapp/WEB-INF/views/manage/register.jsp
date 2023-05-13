@@ -44,7 +44,6 @@
                                 <div class="form-group row">
 
                                 <!-- 상품 등록 뷰 name 값은 VO변수랑 동일 -->
-                                
                                 	<div class="col-sm-6 mb-3 mb-sm-0">
                                 		<hr> 
                                     	<input type="text"  class="form-control form-control-user" name="ki_num" placeholder="종류번호">
@@ -101,8 +100,6 @@
                                  
                                   </div> 
                                 <input type="submit" class="btn btn-primary btn-user btn-block" value="상품등록">
-                                    
-                                
                                 <hr>
                                 <a href="manageMain.do" class="btn btn-google btn-user btn-block">
                                     <i class="fab fa-google fa-fw"></i> 관리자 페이지로 이동

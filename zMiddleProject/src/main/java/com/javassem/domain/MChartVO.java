@@ -2,13 +2,17 @@ package com.javassem.domain;
 
 public class MChartVO {
 	
-	private Integer or_num;
-	private Integer user_num;
-	private Integer or_totalprice;
-	private String  or_paydate;
-	private Integer item_num;
-	private Integer al_num;
-	private Integer item_count;
+	//주류 주문 멤버변수선언
+	
+	private Integer or_num;			//주문번호
+	private Integer user_num;		//회원번호
+	private Integer or_totalprice;	//주문총액수
+	private String  or_paydate;		//주문날짜
+	private Integer item_num;		//결제상품번호
+	private Integer al_num;			//주류번호
+	private Integer item_count;		//주류수량
+	
+	//Getter and Setter
 	
 	public Integer getOr_num() {
 		return or_num;

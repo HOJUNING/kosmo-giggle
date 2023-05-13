@@ -14,7 +14,7 @@ public class MChartDAOImpl implements MChartDAO {
 	@Autowired
 	private SqlSessionTemplate mybatis;
 	
-	@Override
+	@Override // 차트리스트 검색
 	public List<MChartVO> chartList() {
 		List<MChartVO> list = mybatis.selectList("MChartDAO.selectChart");
 		return list;
