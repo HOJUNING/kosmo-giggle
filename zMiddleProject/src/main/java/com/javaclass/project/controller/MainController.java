@@ -106,6 +106,13 @@ public class MainController {
 		if(result.getEvt_per()!=0) {
 			result.setSale_price( result.getAl_price() - result.getAl_price()/result.getEvt_per() );
 		}
+		if(result.getFl_body()!=0) {
+			result.setFl_body(result.getFl_body()*20);
+			result.setFl_danmat(result.getFl_danmat()*20);
+			result.setFl_sinmat(result.getFl_sinmat()*20);
+			result.setFl_tansan(result.getFl_tansan()*20);
+			
+		}
 		
 		m.addAttribute("alDetail", result);
 		

@@ -18,6 +18,7 @@
     rel="stylesheet">
 
     <!-- Css Styles -->
+    <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/flaticon.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/barfiller.css" type="text/css">
@@ -27,7 +28,6 @@
     <link rel="stylesheet" href="./resources/css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
 </head>
 
 <body>

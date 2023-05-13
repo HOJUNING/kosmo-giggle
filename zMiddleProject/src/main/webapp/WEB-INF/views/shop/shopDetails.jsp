@@ -130,8 +130,36 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="tabs-1" role="tabpanel">
                             <div class="row d-flex justify-content-center">
-                                <div class="col-lg-8">
-                                    <p>간단정보 입니다</p>
+								<div class="col-lg-8">
+								
+									<div class="wrap-star">
+									    <h2>당도</h2>
+									    <div class='star-rating'>
+									        <span style ="width:${alDetail.fl_danmat}%"></span>
+									    </div>
+									</div>
+									
+									<div class="wrap-star">
+									    <h2>산미</h2>
+									    <div class='star-rating'>
+									        <span style ="width:${alDetail.fl_sinmat}%"></span>
+									    </div>
+									</div>
+									
+									<div class="wrap-star">
+									    <h2>탄산</h2>
+									    <div class='star-rating'>
+									        <span style ="width:${alDetail.fl_tansan}%"></span>
+									    </div>
+									</div>
+									
+									<div class="wrap-star">
+									    <h2>바디감</h2>
+									    <div class='star-rating'>
+									        <span style ="width:${alDetail.fl_body}%"></span>
+									    </div>
+									</div>
+									
                                 </div>
                             </div>
                         </div>
@@ -173,6 +201,7 @@
 <script type="text/javascript">
 $(function(){
 	
+		
 	$("#hidden_userNum").val(${sessionScope.user_num});
 	
 	$("#intoCart").click(function(){
